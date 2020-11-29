@@ -1,0 +1,36 @@
+#example1{
+    text-align: center;
+}
+
+.fa-eye{
+    color:#007bff
+}
+
+#dataTables_paginate{
+    justify-content: flex-end;
+}
+
+#table_row{
+    padding:0 !important;
+}
+
+.active-btn{
+    background-color: #DEE2E5;
+}
+
+.pagination > li{
+    margin: 0px 5px;
+}
+
+.pagination > li>a{
+color:black
+}
+
+.form-control{
+    display: inline-block !important;
+    width: fit-content !important;
+}
+
+.col-md-4{
+    padding: 0;
+}
