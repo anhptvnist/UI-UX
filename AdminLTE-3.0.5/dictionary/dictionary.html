@@ -10,7 +10,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Flash Typing</title>
+    <title>Dictionary - Flash Typing</title>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
@@ -19,7 +19,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <!-- Custom css -->
-    <link rel="stylesheet" href="./statistic.css">
+    <link rel="stylesheet" href="./dictionary.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -211,7 +211,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item has-treeview menu-open">
+                        <li class="nav-item has-treeview">
                             <a href="#" class="nav-link ">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
@@ -221,13 +221,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item ">
-                                    <a href="statistic.html" class="nav-link ">
+                                    <a href="./../statistic/statistic.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Lịch sử tập gõ</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
+                                    <a href="./../statistic/ranking.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Bảng xếp hạng</p>
                                     </a>
@@ -236,7 +236,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
 
                         <li class="nav-item">
-                            <a href="./../dictionary/dictionary.html" class="nav-link">
+                            <a href="#" class="nav-link active">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
                                     Từ điển
@@ -258,12 +258,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Bảng xếp hạng</h1>
+                            <h1 class="m-0 text-dark">Quản lý từ điển</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                                <li class="breadcrumb-item active">Bảng xếp hạng</li>
+                                <li class="breadcrumb-item active">Quản lý từ điển</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -276,29 +276,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="card card-primary card-outline">
-                                <div class="card-header">
-                                    <h5 class="m-0"> Xếp hạng 10 thành tích tốt nhất</h5>
-                                </div>
+                            <div class="card">
                                 <div class="card-body">
                                     <div class="box">
                                         <div class="box-body">
-                                            <!-- <div class="row search-form">
-                                                <div class="col-md-4" style="margin-bottom: 10px;">
-                                                    <label style="display: inline; margin-right:10px">Nhập từ
-                                                        khóa</label>
-                                                    <input type="search" class="form-control" placeholder=""
+                                            <div class="row search-form">
+                                                <div class="" style="margin-bottom: 10px;">
+                                                    <label style="display: inline; margin-right:10px">Tên từ
+                                                        điển</label>
+                                                    <input type="search" class="form-control" placeholder="Tìm kiếm"
                                                         aria-controls="example1">
                                                 </div>
 
-                                                <div class="col-md-8">
+                                                <div class="">
                                                     <div id="example1_filter" class="dataTables_filter">
                                                         <label></label>
                                                         <a href="#" class="btn btn-success"
                                                             style="margin-bottom: 10px;">Tìm kiếm</a>
                                                     </div>
                                                 </div>
-                                            </div> -->
+                                            </div>
 
                                             <div class="row">
                                                 <div class="col-sm-12" id="table_row">
@@ -307,107 +304,84 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                         aria-describedby="example1_info">
                                                         <thead>
                                                             <tr role="row">
-                                                                <th class="sorting_asc" tabindex="0"
+                                                                <!-- <th class="sorting_asc" tabindex="0"
                                                                     aria-controls="example1" rowspan="1" colspan="1"
                                                                     aria-sort="ascending"
                                                                     aria-label="Rendering engine: activate to sort column descending"
-                                                                    style="width: 132.4px;">Hạng</th>
+                                                                    style="width: 132.4px;">STT</th> -->
                                                                 <th class="sorting" tabindex="0"
                                                                     aria-controls="example1" rowspan="1" colspan="1"
                                                                     aria-label="Browser: activate to sort column ascending"
-                                                                    style="width: 261.8px;">Tài khoản</th>
+                                                                    style="width: 261.8px;">Tên từ điển</th>
                                                                 <th class="sorting" tabindex="0"
                                                                     aria-controls="example1" rowspan="1" colspan="1"
                                                                     aria-label="Platform(s): activate to sort column ascending"
-                                                                    style="width: 233.8px;">Tốc độ(từ/phút)</th>
-                                                                <th class="sorting" tabindex="0"
-                                                                    aria-controls="example1" rowspan="1" colspan="1"
-                                                                    aria-label="Engine version: activate to sort column ascending"
-                                                                    style="width: 184.2px;">Số từ đúng/sai</th>
+                                                                    style="width: 233.8px;">Số lương từ</th>
                                                                 <th class="sorting" tabindex="0"
                                                                     aria-controls="example1" rowspan="1" colspan="1"
                                                                     aria-label="CSS grade: activate to sort column ascending"
-                                                                    style="width: 213.8px;">Thời gian</th>
+                                                                    style="width: 213.8px;">Hành động</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             <tr role="row" class="odd">
-                                                                <td class="sorting_1">1</td>
-                                                                <td>Linh nhanh tay</td>
-                                                                <td>999</td>
-                                                                <td>999 - 0</td>
-                                                                <td>29-11-2020</td>
+                                                                <td>Từ điển bộ gõ v1</td>
+                                                                <td>1806</td>
+                                                                <td>
+                                                                    <button class="btn btn-info" type="button"
+                                                                        data-toggle="modal"
+                                                                        data-target="#modal-info-v1">
+                                                                        <i class="fas fa-info"></i>
+                                                                    </button>
+                                                                    <button class="btn btn-danger"
+                                                                        onclick="clickDownload('Từ điển bộ gõ v1')">
+                                                                        <i class="fas fa-download"></i>
+                                                                    </button>
+                                                                </td>
                                                             </tr>
-                                                            <tr role="row" class="odd">
-                                                                <td class="sorting_1">2</td>
-                                                                <td>Linh nhanh tay</td>
-                                                                <td>999</td>
-                                                                <td>999 - 0</td>
-                                                                <td>29-11-2020</td>
-                                                            </tr>
-                                                            <tr role="row" class="even">
-                                                                <td class="sorting_1">3</td>
-                                                                <td>Quang tay nhanh hơn não</td>
-                                                                <td>888</td>
-                                                                <td>880 - 0</td>
-                                                                <td>29-11-2020</td>
-                                                            </tr>
-                                                            <tr role="row" class="even">
-                                                                <td class="sorting_1">4</td>
-                                                                <td>Quang tay nhanh hơn não</td>
-                                                                <td>888</td>
-                                                                <td>880 - 0</td>
-                                                                <td>29-11-2020</td>
-                                                            </tr>
-                                                            <tr role="row" class="odd">
-                                                                <td class="sorting_1">5</td>
-                                                                <td>Anh Như Quang</td>
-                                                                <td>888</td>
-                                                                <td>880 - 0</td>
-                                                                <td>29-11-2020</td>
-                                                            </tr>
-                                                            <tr role="row" class="odd">
-                                                                <td class="sorting_1">6</td>
-                                                                <td>Anh Như Quang</td>
-                                                                <td>888</td>
-                                                                <td>880 - 0</td>
-                                                                <td>29-11-2020</td>
-                                                            </tr>
-                                                            <tr role="row" class="even">
-                                                                <td class="sorting_1">7</td>
-                                                                <td>An Big Hand</td>
-                                                                <td>777</td>
-                                                                <td>756 - 10</td>
-                                                                <td>29-11-2020</td>
-                                                            </tr>
-                                                            <tr role="row" class="even">
-                                                                <td class="sorting_1">8</td>
-                                                                <td>An Big Hand</td>
-                                                                <td>777</td>
-                                                                <td>756 - 10</td>
-                                                                <td>29-11-2020</td>
-                                                            </tr>
-                                                            <tr role="row" class="odd">
-                                                                <td class="sorting_1">9</td>
-                                                                <td>Huy về chót</td>
-                                                                <td>666</td>
-                                                                <td>666 - 0</td>
-                                                                <td>29-11-2020</td>
-                                                            </tr>
-                                                            <tr role="row" class="odd">
-                                                                <td class="sorting_1">10</td>
-                                                                <td>Huy về chót</td>
-                                                                <td>666</td>
-                                                                <td>666 - 0</td>
-                                                                <td>29-11-2020</td>
-                                                            </tr>
-
+                                                            <!-- <tr role="row" class="odd">
+                                                                <td>Từ điển bộ gõ v2</td>
+                                                                <td>1806</td>
+                                                                <td>
+                                                                    <button class="btn btn-info">
+                                                                        <i class="fas fa-info"></i>
+                                                                    </button>
+                                                                    <button class="btn btn-danger"
+                                                                        onclick="clickDownload('Từ điển bộ gõ v2')">
+                                                                        <i class="fas fa-download"></i>
+                                                                    </button>
+                                                                </td>
+                                                            </tr> -->
                                                         </tbody>
 
                                                     </table>
                                                 </div>
                                             </div>
+                                            <div class="row" id="dataTables_paginate">
 
+                                                <div class="dataTables_paginate paging_simple_numbers"
+                                                    id="example1_paginate">
+                                                    <ul class="pagination">
+                                                        <li class="btn btn-default disabled" id="example1_previous">
+                                                            <a href="#" aria-controls="example1" data-dt-idx="0"
+                                                                tabindex="0"><i
+                                                                    class="fas fa-angle-double-left"></i></a></li>
+                                                        <li class="btn btn-default active-btn"><a href="#"
+                                                                aria-controls="example1" data-dt-idx="1"
+                                                                tabindex="0">1</a></li>
+                                                        <li class="btn btn-default "><a href="#"
+                                                                aria-controls="example1" data-dt-idx="2"
+                                                                tabindex="0">2</a></li>
+                                                        <li class="btn btn-default "><a href="#"
+                                                                aria-controls="example1" data-dt-idx="3"
+                                                                tabindex="0">3</a></li>
+
+                                                        <li class="btn btn-default next" id="example1_next"><a href="#"
+                                                                aria-controls="example1" data-dt-idx="7" tabindex="0"><i
+                                                                    class="fas fa-angle-double-right"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                         <!-- /.box-body -->
                                     </div>
@@ -450,7 +424,170 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div>
     <!-- ./wrapper -->
 
+    <div class="modal fade" id="modal-info-v1" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Bộ từ điển v1</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row search-form">
+                        <div class="" style="margin-bottom: 10px;">
+                            <label style="display: inline; margin-right:10px">Âm tiết</label>
+                            <input type="search" class="form-control" placeholder=""
+                                aria-controls="example1">
+                        </div>
+                    </div>
+                    <div class="row search-form form-group">
+                        <div style="margin-bottom: 10px;">
+                            <label class="form-control-static" style="display: inline; margin-right:10px">Mã gõ</label>
+                            <input type="search" class="form-control" style="margin-left:10px" placeholder=""
+                                aria-controls="example1">
+                        </div>
+                        <div >
+                            <div id="example1_filter" class="dataTables_filter">
+                                <label></label>
+                                <a href="#" class="btn btn-success"
+                                    style="margin: 0 10px;">Tìm kiếm</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12" id="table_row">
+                            <table id="example1"
+                                class="table table-bordered table-striped dataTable" role="grid"
+                                aria-describedby="example1_info">
+                                <thead>
+                                    <tr role="row">
+                                        <!-- <th class="sorting_asc" tabindex="0"
+                                            aria-controls="example1" rowspan="1" colspan="1"
+                                            aria-sort="ascending"
+                                            aria-label="Rendering engine: activate to sort column descending"
+                                            style="width: 132.4px;">STT</th> -->
+                                        <th class="sorting" tabindex="0"
+                                            aria-controls="example1" rowspan="1" colspan="1"
+                                            aria-label="Browser: activate to sort column ascending"
+                                            style="width: 261.8px;">Âm tiết</th>
+                                        <th class="sorting" tabindex="0"
+                                            aria-controls="example1" rowspan="1" colspan="1"
+                                            aria-label="Platform(s): activate to sort column ascending"
+                                            style="width: 233.8px;">Mã gõ</th>
+                                        <th class="sorting" tabindex="0"
+                                            aria-controls="example1" rowspan="1" colspan="1"
+                                            aria-label="CSS grade: activate to sort column ascending"
+                                            style="width: 213.8px;">Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr role="row" class="odd">
+                                        <td>an</td>
+                                        <td>hdjbc</td>
+                                        <td>
+                                            <button class="btn btn-warning"
+                                                onclick="clickRemind(false)">
+                                                <i class="fas fa-star"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td>anh</td>
+                                        <td>asca</td>
+                                        <td>
+                                            <button class="btn btn-outline-warning"
+                                                onclick="clickRemind(true)">
+                                                <i class="fas fa-star"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td>ang</td>
+                                        <td>ghdki</td>
+                                        <td>
+                                            <button class="btn btn-outline-warning"
+                                                onclick="clickRemind(true)">
+                                                <i class="fas fa-star"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td>am</td>
+                                        <td>rtgyh</td>
+                                        <td>
+                                            <button class="btn btn-warning"
+                                                onclick="clickRemind(true)">
+                                                <i class="fas fa-star"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td>ai</td>
+                                        <td>ikjhn</td>
+                                        <td>
+                                            <button class="btn btn-outline-warning"
+                                                onclick="clickRemind(false)">
+                                                <i class="fas fa-star"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row" id="dataTables_paginate">
+
+                        <div class="dataTables_paginate paging_simple_numbers"
+                            id="example1_paginate">
+                            <ul class="pagination">
+                                <li class="btn btn-default disabled" id="example1_previous">
+                                    <a href="#" aria-controls="example1" data-dt-idx="0"
+                                        tabindex="0"><i
+                                            class="fas fa-angle-double-left"></i></a></li>
+                                <li class="btn btn-default active-btn"><a href="#"
+                                        aria-controls="example1" data-dt-idx="1"
+                                        tabindex="0">1</a></li>
+                                <li class="btn btn-default "><a href="#"
+                                        aria-controls="example1" data-dt-idx="2"
+                                        tabindex="0">2</a></li>
+                                <li class="btn btn-default "><a href="#"
+                                        aria-controls="example1" data-dt-idx="3"
+                                        tabindex="0">3</a></li>
+
+                                <li class="btn btn-default next" id="example1_next"><a href="#"
+                                        aria-controls="example1" data-dt-idx="7" tabindex="0"><i
+                                            class="fas fa-angle-double-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    
     <!-- REQUIRED SCRIPTS -->
+    <script>
+        const clickDownload = (msg) => {
+            alert(`Downloading "${msg}" . . . `)
+        }
+        const clickRemind = (remind) => {
+            if(remind) {
+                alert(`Save in reminded list . . . `);
+            } else {
+                alert(`Remove from reminded list . . . `);
+            }
+            
+        }
+    </script>
 
     <!-- jQuery -->
     <script src="../plugins/jquery/jquery.min.js"></script>
