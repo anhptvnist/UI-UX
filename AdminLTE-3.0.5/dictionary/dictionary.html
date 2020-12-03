@@ -284,7 +284,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 <div class="" style="margin-bottom: 10px;">
                                                     <label style="display: inline; margin-right:10px">Tên từ
                                                         điển</label>
-                                                    <input type="search" class="form-control" placeholder="Tìm kiếm"
+                                                    <input type="search" class="form-control" placeholder="Nhập tên từ điển..."
                                                         aria-controls="example1">
                                                 </div>
 
@@ -292,7 +292,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <div id="example1_filter" class="dataTables_filter">
                                                         <label></label>
                                                         <a href="#" class="btn btn-success"
-                                                            style="margin-bottom: 10px;">Tìm kiếm</a>
+                                                            style="margin-bottom: 10px;" title="Tìm kiếm bộ từ điển">Tìm kiếm</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -330,11 +330,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                 <td>
                                                                     <button class="btn btn-info" type="button"
                                                                         data-toggle="modal"
-                                                                        data-target="#modal-info-v1">
+                                                                        data-target="#modal-info-v1"  title="Xem thông tin chi tiết">
                                                                         <i class="fas fa-info"></i>
                                                                     </button>
                                                                     <button class="btn btn-danger"
-                                                                        onclick="clickDownload('Từ điển bộ gõ v1')">
+                                                                        onclick="clickDownload('Từ điển bộ gõ v1')"  title="Tải bộ từ điển này!">
                                                                         <i class="fas fa-download"></i>
                                                                     </button>
                                                                 </td>
@@ -437,21 +437,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="row search-form">
                         <div class="" style="margin-bottom: 10px;">
                             <label style="display: inline; margin-right:10px">Âm tiết</label>
-                            <input type="search" class="form-control" placeholder=""
+                            <input type="search" class="form-control" placeholder="Nhập âm tiết..."
                                 aria-controls="example1">
                         </div>
                     </div>
                     <div class="row search-form form-group">
                         <div style="margin-bottom: 10px;">
-                            <label class="form-control-static" style="display: inline; margin-right:10px">Mã gõ</label>
-                            <input type="search" class="form-control" style="margin-left:10px" placeholder=""
+                            <label class="form-control-static" style="display: inline; margin-right:20px">Mã gõ</label>
+                            <input type="search" class="form-control" style="margin-left: 0px " placeholder="Nhập mã gõ..."
                                 aria-controls="example1">
                         </div>
                         <div >
                             <div id="example1_filter" class="dataTables_filter">
                                 <label></label>
                                 <a href="#" class="btn btn-success"
-                                    style="margin: 0 10px;">Tìm kiếm</a>
+                                    style="margin: 0 10px;"  title="Tìm kiếm">Tìm kiếm</a>
                             </div>
                         </div>
                     </div>
@@ -488,7 +488,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <td>hdjbc</td>
                                         <td>
                                             <button class="btn btn-warning"
-                                                onclick="clickRemind(false)">
+                                                onclick="clickRemind(false)" title="Xóa khỏi danh sách đang học">
                                                 <i class="fas fa-star"></i>
                                             </button>
                                         </td>
@@ -498,7 +498,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <td>asca</td>
                                         <td>
                                             <button class="btn btn-outline-warning"
-                                                onclick="clickRemind(true)">
+                                                onclick="clickRemind(true)" title="Lưu vào danh sách đang học">
                                                 <i class="fas fa-star"></i>
                                             </button>
                                         </td>
@@ -508,7 +508,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <td>ghdki</td>
                                         <td>
                                             <button class="btn btn-outline-warning"
-                                                onclick="clickRemind(true)">
+                                                onclick="clickRemind(true)" title="Lưu vào danh sách đang học">
                                                 <i class="fas fa-star"></i>
                                             </button>
                                         </td>
@@ -518,7 +518,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <td>rtgyh</td>
                                         <td>
                                             <button class="btn btn-warning"
-                                                onclick="clickRemind(true)">
+                                                onclick="clickRemind(true)" title="Xóa khỏi danh sách đang học">
                                                 <i class="fas fa-star"></i>
                                             </button>
                                         </td>
@@ -528,7 +528,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <td>ikjhn</td>
                                         <td>
                                             <button class="btn btn-outline-warning"
-                                                onclick="clickRemind(false)">
+                                                onclick="clickRemind(false)" title="Lưu vào danh sách đang học">
                                                 <i class="fas fa-star"></i>
                                             </button>
                                         </td>
@@ -577,13 +577,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- REQUIRED SCRIPTS -->
     <script>
         const clickDownload = (msg) => {
-            alert(`Downloading "${msg}" . . . `)
+            alert(`Đang tải "${msg}" . . . `)
         }
         const clickRemind = (remind) => {
             if(remind) {
-                alert(`Save in reminded list . . . `);
+                alert(`Lưu vào danh sách đang học . . . `);
             } else {
-                alert(`Remove from reminded list . . . `);
+                alert(`Xóa khỏi danh sách đang học . . . `);
             }
             
         }
