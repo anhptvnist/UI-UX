@@ -187,13 +187,55 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item has-treeview menu-open">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon far fa-keyboard"></i>
                                 <p>
                                     Tập gõ
+                                    <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item has-treeview">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon far fa-keyboard"></i>
+                                        <p>Tập gõ theo Âm tiết</p>
+                                        <i class="right fas fa-angle-left"></i>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item ">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Tập gõ theo Âm đầu</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Tập gõ theo Âm chính</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Tập gõ theo Âm cuối</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                <li class="nav-item ">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tập gõ từ</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a href="./../training/training.html" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tập gõ câu</p>
+                                    </a>
+                                </li>
+                            </ul>
+
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -202,6 +244,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     Kiểm tra
                                 </p>
                             </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item ">
+                                    <a href="./../test/test.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Kiểm tra nhanh</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./../test/listtest.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Kiểm tra theo từng bài</p>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -284,7 +340,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 <div class="" style="margin-bottom: 10px;">
                                                     <label style="display: inline; margin-right:10px">Tên từ
                                                         điển</label>
-                                                    <input type="search" class="form-control" placeholder="Tìm kiếm"
+                                                    <input type="search" class="form-control" placeholder="Nhập tên từ điển..."
                                                         aria-controls="example1">
                                                 </div>
 
@@ -292,7 +348,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <div id="example1_filter" class="dataTables_filter">
                                                         <label></label>
                                                         <a href="#" class="btn btn-success"
-                                                            style="margin-bottom: 10px;">Tìm kiếm</a>
+                                                            style="margin-bottom: 10px;" title="Tìm kiếm bộ từ điển">Tìm kiếm</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -330,11 +386,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                 <td>
                                                                     <button class="btn btn-info" type="button"
                                                                         data-toggle="modal"
-                                                                        data-target="#modal-info-v1">
+                                                                        data-target="#modal-info-v1"  title="Xem thông tin chi tiết">
                                                                         <i class="fas fa-info"></i>
                                                                     </button>
                                                                     <button class="btn btn-danger"
-                                                                        onclick="clickDownload('Từ điển bộ gõ v1')">
+                                                                        onclick="clickDownload('Từ điển bộ gõ v1')"  title="Tải bộ từ điển này!">
                                                                         <i class="fas fa-download"></i>
                                                                     </button>
                                                                 </td>
@@ -437,29 +493,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="row search-form">
                         <div class="" style="margin-bottom: 10px;">
                             <label style="display: inline; margin-right:10px">Âm tiết</label>
-                            <input type="search" class="form-control" placeholder=""
+                            <input type="search" class="form-control" placeholder="Nhập âm tiết..."
                                 aria-controls="example1">
                         </div>
                     </div>
                     <div class="row search-form form-group">
                         <div style="margin-bottom: 10px;">
-                            <label class="form-control-static" style="display: inline; margin-right:10px">Mã gõ</label>
-                            <input type="search" class="form-control" style="margin-left:10px" placeholder=""
+                            <label class="form-control-static" style="display: inline; margin-right:20px">Mã gõ</label>
+                            <input type="search" class="form-control" style="margin-left: 0px " placeholder="Nhập mã gõ..."
                                 aria-controls="example1">
                         </div>
-                        <div >
+                        <div>
                             <div id="example1_filter" class="dataTables_filter">
                                 <label></label>
                                 <a href="#" class="btn btn-success"
-                                    style="margin: 0 10px;">Tìm kiếm</a>
+                                    style="margin: 0 10px;"  title="Tìm kiếm">Tìm kiếm</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-sm-12" id="table_row">
-                            <table id="example1"
-                                class="table table-bordered table-striped dataTable" role="grid"
+                            <table id="example1" class="table table-bordered table-striped dataTable" role="grid"
                                 aria-describedby="example1_info">
                                 <thead>
                                     <tr role="row">
@@ -468,17 +523,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             aria-sort="ascending"
                                             aria-label="Rendering engine: activate to sort column descending"
                                             style="width: 132.4px;">STT</th> -->
-                                        <th class="sorting" tabindex="0"
-                                            aria-controls="example1" rowspan="1" colspan="1"
-                                            aria-label="Browser: activate to sort column ascending"
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
+                                            colspan="1" aria-label="Browser: activate to sort column ascending"
                                             style="width: 261.8px;">Âm tiết</th>
-                                        <th class="sorting" tabindex="0"
-                                            aria-controls="example1" rowspan="1" colspan="1"
-                                            aria-label="Platform(s): activate to sort column ascending"
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
+                                            colspan="1" aria-label="Platform(s): activate to sort column ascending"
                                             style="width: 233.8px;">Mã gõ</th>
-                                        <th class="sorting" tabindex="0"
-                                            aria-controls="example1" rowspan="1" colspan="1"
-                                            aria-label="CSS grade: activate to sort column ascending"
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
+                                            colspan="1" aria-label="CSS grade: activate to sort column ascending"
                                             style="width: 213.8px;">Hành động</th>
                                     </tr>
                                 </thead>
@@ -488,7 +540,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <td>hdjbc</td>
                                         <td>
                                             <button class="btn btn-warning"
-                                                onclick="clickRemind(false)">
+                                                onclick="clickRemind(false)" title="Xóa khỏi danh sách đang học">
                                                 <i class="fas fa-star"></i>
                                             </button>
                                         </td>
@@ -498,7 +550,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <td>asca</td>
                                         <td>
                                             <button class="btn btn-outline-warning"
-                                                onclick="clickRemind(true)">
+                                                onclick="clickRemind(true)" title="Lưu vào danh sách đang học">
                                                 <i class="fas fa-star"></i>
                                             </button>
                                         </td>
@@ -508,7 +560,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <td>ghdki</td>
                                         <td>
                                             <button class="btn btn-outline-warning"
-                                                onclick="clickRemind(true)">
+                                                onclick="clickRemind(true)" title="Lưu vào danh sách đang học">
                                                 <i class="fas fa-star"></i>
                                             </button>
                                         </td>
@@ -518,7 +570,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <td>rtgyh</td>
                                         <td>
                                             <button class="btn btn-warning"
-                                                onclick="clickRemind(true)">
+                                                onclick="clickRemind(true)" title="Xóa khỏi danh sách đang học">
                                                 <i class="fas fa-star"></i>
                                             </button>
                                         </td>
@@ -528,7 +580,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <td>ikjhn</td>
                                         <td>
                                             <button class="btn btn-outline-warning"
-                                                onclick="clickRemind(false)">
+                                                onclick="clickRemind(false)" title="Lưu vào danh sách đang học">
                                                 <i class="fas fa-star"></i>
                                             </button>
                                         </td>
@@ -540,26 +592,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
                     <div class="row" id="dataTables_paginate">
 
-                        <div class="dataTables_paginate paging_simple_numbers"
-                            id="example1_paginate">
+                        <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
                             <ul class="pagination">
                                 <li class="btn btn-default disabled" id="example1_previous">
-                                    <a href="#" aria-controls="example1" data-dt-idx="0"
-                                        tabindex="0"><i
+                                    <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0"><i
                                             class="fas fa-angle-double-left"></i></a></li>
-                                <li class="btn btn-default active-btn"><a href="#"
-                                        aria-controls="example1" data-dt-idx="1"
-                                        tabindex="0">1</a></li>
-                                <li class="btn btn-default "><a href="#"
-                                        aria-controls="example1" data-dt-idx="2"
+                                <li class="btn btn-default active-btn"><a href="#" aria-controls="example1"
+                                        data-dt-idx="1" tabindex="0">1</a></li>
+                                <li class="btn btn-default "><a href="#" aria-controls="example1" data-dt-idx="2"
                                         tabindex="0">2</a></li>
-                                <li class="btn btn-default "><a href="#"
-                                        aria-controls="example1" data-dt-idx="3"
+                                <li class="btn btn-default "><a href="#" aria-controls="example1" data-dt-idx="3"
                                         tabindex="0">3</a></li>
 
-                                <li class="btn btn-default next" id="example1_next"><a href="#"
-                                        aria-controls="example1" data-dt-idx="7" tabindex="0"><i
-                                            class="fas fa-angle-double-right"></i></a></li>
+                                <li class="btn btn-default next" id="example1_next"><a href="#" aria-controls="example1"
+                                        data-dt-idx="7" tabindex="0"><i class="fas fa-angle-double-right"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -573,19 +619,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
         <!-- /.modal-dialog -->
     </div>
-    
+
     <!-- REQUIRED SCRIPTS -->
     <script>
         const clickDownload = (msg) => {
-            alert(`Downloading "${msg}" . . . `)
+            alert(`Đang tải "${msg}" . . . `)
         }
         const clickRemind = (remind) => {
             if(remind) {
-                alert(`Save in reminded list . . . `);
+                alert(`Lưu vào danh sách đang học . . . `);
             } else {
-                alert(`Remove from reminded list . . . `);
+                alert(`Xóa khỏi danh sách đang học . . . `);
             }
-            
+
         }
     </script>
 
