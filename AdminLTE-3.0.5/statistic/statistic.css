@@ -34,3 +34,17 @@ color:black
 .col-md-4{
     padding: 0;
 }
+
+.tags{
+    padding: 0px 10px !important;
+}
+.progress-group {
+    margin-bottom: 1.5rem !important;
+}
+.products-list {
+    margin: 0.5rem !important;
+}
+
+.font-50{
+    font-size: 50px;
+}
