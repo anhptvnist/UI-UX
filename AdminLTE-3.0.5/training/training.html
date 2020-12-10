@@ -20,6 +20,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <!-- Custom css -->
     <link rel="stylesheet" href="./../test/test.css">
+    <link rel="stylesheet" href="../../keyboard/style.css">
 
 
 
@@ -382,12 +383,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <div class="box">
                                         <div class="box-body">
                                             <div class="row" style="display: flex; justify-content: flex-end;">
-                                                <a href="#" class="  btn btn-success" title="Thêm bài" onclick="">
+                                                <a href="#" class="  btn btn-success" id="btn-add" title="Thêm bài" data-toggle="modal" data-target="#modal-default">
                                                     <!-- pull-right style="cursor: pointer; color: green; display: flex; justify-content: center; align-items: center;" -->
                                                     <i class="fas fa-plus-circle"></i>
                                                 </a>
                                             </div>
-
+                                            <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h4 class="modal-title">Thêm câu mới</h4>
+                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                      </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <textarea type="text" class="form-control" id="text_input"
+                                                        placeholder="Nhập câu" width="80%"></textarea>
+                                                    </div>
+                                                    <div class="modal-footer justify-content-between">
+                                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                      <button type="button" class="btn btn-primary" onclick="add()" data-dismiss="modal">Add</button>
+                                                    </div>
+                                                  </div>
+                                                  <!-- /.modal-content -->
+                                                </div>
+                                                <!-- /.modal-dialog -->
+                                              </div>
+                                              
 
 
                                             <div class="row">
@@ -395,8 +418,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <h1 class="">Bài luyện tập gõ câu</h1>
                                                 </div>
 
-                                                <div id="typing-container" class="row">
-                                                    <div id="words">
+                                                <div id="typing-container" class="row" style="width: 100%;">
+                                                    <div id="words" style="width: 100%;  overflow-y:scroll;">
                                                         <div id="row1">
                                                             <span wordnr="0" class="correct"> Tuấn</span>
                                                             <span wordnr="1" class="wrong"> Anh</span>
@@ -422,8 +445,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <div class="row"
                                                         style="margin-top: 20px; background: none; margin-left: 5%">
                                                         <div id="input-group" style="width: 80%; ">
-                                                            <input type="text" class="form-control" id="inputfield"
-                                                                placeholder="Nhập từ" width="80%">
+                                                            <input type="text" class="form-control" id="inputfield" 
+                                                                placeholder="Nhập từ" width="80%" onkeyup="myFunction(event)" onkeyup="press_key(event)">
                                                         </div>
                                                         <div class="input-group-append">
                                                             <button type="button" class="btn btn-primary"
@@ -437,6 +460,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                 Gợi ý
                                                             </button>
                                                         </div>
+                                                        <div class="input-group-append">
+                                                            <button type="button" class="btn btn-primary"
+                                                                style="margin-left: 5px;" onclick="next()">
+                                                                Câu tiếp
+                                                            </button>
+                                                        </div>
 
                                                     </div>
                                                     <div class="row" style="margin-top: 30px;">
@@ -445,20 +474,79 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                 <div>
                                                                     Văn bản nhập:
                                                                 </div>
-                                                                <textarea class="form-control"></textarea>
+                                                                <textarea class="form-control" id="text-input" readonly></textarea>
                                                             </div>
                                                         </div>
 
                                                         <div class="col-6">
                                                             <div class="form-group">
                                                                 <div>
-                                                                    Ký tự vừa nhập:
+                                                                    Ký tự vừa nhập: 
                                                                 </div>
-                                                                <textarea class="form-control"></textarea>
+                                                                <textarea class="form-control" id="key_pressed" readonly></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div class = "row">
+                                                    <ul id="keyboard">
+                                                        <li class="symbol" id="192"><span class="off">`</span><span class="on">~</span></li>
+                                                        <li class="symbol" id="1"><span class="off">1</span><span class="on">!</span></li>
+                                                        <li class="symbol" id="2"><span class="off">2</span><span class="on">@</span></li>
+                                                        <li class="symbol" id="3"><span class="off">3</span><span class="on">#</span></li>
+                                                        <li class="symbol" id="4"><span class="off">4</span><span class="on">$</span></li>
+                                                        <li class="symbol" id="5"><span class="off">5</span><span class="on">%</span></li>
+                                                        <li class="symbol" id="6"><span class="off">6</span><span class="on">^</span></li>
+                                                        <li class="symbol" id="7"><span class="off">7</span><span class="on">&amp;</span></li>
+                                                        <li class="symbol" id="8"><span class="off">8</span><span class="on">*</span></li>
+                                                        <li class="symbol" id="9"><span class="off">9</span><span class="on">(</span></li>
+                                                        <li class="symbol" id="0"><span class="off">0</span><span class="on">)</span></li>
+                                                        <li class="symbol" id="189"><span class="off">-</span><span class="on">_</span></li>
+                                                        <li class="symbol" id="187"><span class="off">=</span><span class="on">+</span></li>
+                                                        <li class="delete lastitem" id="delete">Backspace</li>
+                                                        <li class="tab" id="tab">Tab</li>
+                                                        <li class="letter" id="Q">q</li>
+                                                        <li class="letter" id="W">w</li>
+                                                        <li class="letter" id="E">e</li>
+                                                        <li class="letter" id="R">r</li>
+                                                        <li class="letter" id="T">t</li>
+                                                        <li class="letter" id="Y">y</li>
+                                                        <li class="letter" id="U">u</li>
+                                                        <li class="letter" id="I">i</li>
+                                                        <li class="letter" id="O">o</li>
+                                                        <li class="letter" id="P">p</li>
+                                                        <li class="symbol" id="mongoac"><span class="off">[</span><span class="on">{</span></li>
+                                                        <li class="symbol" id="dongngoac"><span class="off">]</span><span class="on">}</span></li>
+                                                        <li class="symbol lastitem" id="gachdoc"><span class="off">\</span><span class="on">|</span></li>
+                                                        <li class="capslock" id="capslock">Caps lock</li>
+                                                        <li class="letter" id="A">a</li>
+                                                        <li class="letter" id="S">s</li>
+                                                        <li class="letter" id="D">d</li>
+                                                        <li class="letter" id="F">f</li>
+                                                        <li class="letter" id="G">g</li>
+                                                        <li class="letter" id="H">h</li>
+                                                        <li class="letter" id="J">j</li>
+                                                        <li class="letter" id="K">k</li>
+                                                        <li class="letter" id="L">l</li>
+                                                        <li class="symbol" id="champhay"><span class="off">;</span><span class="on">:</span></li>
+                                                        <li class="symbol" id="ngoacdon"><span class="off">'</span><span class="on">&quot;</span></li>
+                                                        <li class="return lastitem" id="Enter">Enter</li>
+                                                        <li class="left-shift" id="Shift">Shift</li>
+                                                        <li class="letter" id="Z">z</li>
+                                                        <li class="letter" id="X">x</li>
+                                                        <li class="letter" id="C">c</li>
+                                                        <li class="letter" id="V">v</li>
+                                                        <li class="letter" id="B">b</li>
+                                                        <li class="letter" id="N">n</li>
+                                                        <li class="letter" id="M">m</li>
+                                                        <li class="symbol" id="phay"><span class="off">,</span><span class="on">&lt;</span></li>
+                                                        <li class="symbol" id="cham"><span class="off">.</span><span class="on">&gt;</span></li>
+                                                        <li class="symbol" id="gachcheo"><span class="off">/</span><span class="on">?</span></li>
+                                                        <li class="right-shift lastitem" id="Shift">Shift</li>
+                                                        <li class="space lastitem">&nbsp;</li>
+                                                    </ul>
+                                            
                                             </div>
                                         </div>
 
@@ -522,7 +610,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js"></script>
-
+    <!--Keyboard-->
+    <script src="../../keyboard/keyboard.js"></script>
+    <script src="training.js"></script>
 </body>
 
 </html>

@@ -105,4 +105,7 @@ function myFunction(event) {
     setTimeout(() => {
         button.style.backgroundColor = "";
     }, 500)
+    console.log(code)
+    document.getElementById("key_pressed").value += String.fromCharCode(code) + '\n'
 };
+
