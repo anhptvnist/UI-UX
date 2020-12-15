@@ -101,13 +101,22 @@ function myFunction(event) {
     }
     id = String(id)
     var button = document.getElementById(`${id}`)
-    var id2 = "letter" + " " + id
+    var id2 = "letter" + " " + id;
+
     var button2 = document.getElementsByClassName(id2);
+    console.log("hjelooooo", button);
     button.style.backgroundColor = "red";
     setTimeout(() => {
         button.style.backgroundColor = "";
     }, 500)
 
+    // if (button2.length) {
+    console.log("btn2", button2[button2.length - 1]);
+    button2[button2.length - 1].style.backgroundColor = "red";
+    setTimeout(() => {
+        button2[button2.length - 1].style.backgroundColor = '';
+    }, 500);
+    // }
     // Các phím mới nhập
     let time = new Date();
     let text = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + "." + time.getMilliseconds() + "    " + event.key + "\n";
@@ -116,10 +125,5 @@ function myFunction(event) {
     // Hết các phím mới nhập
     document.getElementById("key_pressed").value += String.fromCharCode(code) + '\n'
 
-    if (button2.length) {
-        button2[button2.length - 1].style.backgroundColor = "blue";
-        setTimeout(() => {
-            button2[button2.length - 1].style.backgroundColor = '';
-        }, 500);
-    }
+
 };
