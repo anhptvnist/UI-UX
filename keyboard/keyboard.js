@@ -1,9 +1,9 @@
-$(function() {
+$(function () {
     var $write = $('#write'),
         shift = false,
         capslock = false;
 
-    $('#keyboard li').click(function() {
+    $('#keyboard li').click(function () {
         var $this = $(this),
             character = $this.html(); // If it's a lowercase letter, nothing happens to this variable
 
@@ -107,7 +107,13 @@ function myFunction(event) {
     setTimeout(() => {
         button.style.backgroundColor = "";
     }, 500)
-    console.log(code)
+
+    // Các phím mới nhập
+    let time = new Date();
+    let text = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + "." + time.getMilliseconds() + "    " + event.key + "\n";
+    let textLogs = document.getElementById("text-logs");
+    textLogs.value += text;
+    // Hết các phím mới nhập
     document.getElementById("key_pressed").value += String.fromCharCode(code) + '\n'
 
     if (button2.length) {
