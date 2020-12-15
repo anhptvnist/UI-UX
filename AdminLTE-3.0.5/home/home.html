@@ -393,8 +393,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="col-md-8">
                             <div class="card ">
                                 <div class="card-header">
-                                    <h3 class="card-title">Kết quả gần đây</h3>
+                                    <h3 class="card-title">Kết quả đạt được gần đây</h3>
                                 </div>
+
+                                <div class="position-relative mb-4 products-list product-list-in-card pl-2 pr-2">
+                                    <canvas id="visitors-chart" height="280"></canvas>
+                                </div>
+
+                                <!-- 
                                 <div class="box-body chart-responsive" style="margin-right: 10px;">
                                     <div class="chart" id="line-chart"
                                         style="height: 300px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
@@ -601,7 +607,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -809,10 +815,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- jQuery -->
     <script src="../plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
+    <!-- Bootstrap -->
     <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js"></script>
+
+    <!-- OPTIONAL SCRIPTS -->
+    <script src="../plugins/chart.js/Chart.min.js"></script>
+    <script src="../dist/js/demo.js"></script>
+    <script src="../dist/js/pages/dashboard3.js"></script>
 
 </body>
 
