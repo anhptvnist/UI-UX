@@ -12,7 +12,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <title>Kiểm theo từng bài - Flash Typing</title>
 
-    <link rel="shortcut icon" type="image/png" href="../dist/img/AdminLTELogo.png"/>
+    <link rel="shortcut icon" type="image/png" href="../dist/img/AdminLTELogo.png" />
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
@@ -22,7 +22,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Custom css -->
     <link rel="stylesheet" href="./test.css">
     <link rel="stylesheet" type="text/css" href="../../keyboard/style.css" />
-
+    <link rel="stylesheet" type="text/css" href="../../keyboard/keyboard2.css" />
 
 
 </head>
@@ -41,16 +41,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             <!-- SEARCH FORM -->
             <!-- <form class="form-inline ml-3">
-                <div class="input-group input-group-sm">
-                    <input class="form-control form-control-navbar" type="search" placeholder="Search"
-                        aria-label="Search">
-                    <div class="input-group-append">
-                        <button class="btn btn-navbar" type="submit">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
+            <div class="input-group input-group-sm">
+                <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                    aria-label="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-navbar" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
                 </div>
-            </form> -->
+            </div>
+        </form> -->
 
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
@@ -153,7 +153,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-      <aside class="main-sidebar elevation-4 sidebar-dark-lightblue">
+        <aside class="main-sidebar elevation-4 sidebar-dark-lightblue">
             <!-- Brand Logo -->
             <a href="../home/home.html" class="brand-link">
                 <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
@@ -178,7 +178,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-     with font-awesome or any other icon font library -->
+                        with font-awesome or any other icon font library -->
                         <li class="nav-item">
                             <a href="../home/home.html" class="nav-link">
                                 <i class="nav-icon fas fa-home"></i>
@@ -248,13 +248,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item ">
-                                    <a href="../test/test.html" class="nav-link active">
+                                    <a href="../test/test.html" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Kiểm tra nhanh</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../test/listtest.html" class="nav-link">
+                                    <a href="../test/listtest.html" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Kiểm tra theo từng bài</p>
                                     </a>
@@ -333,10 +333,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-expanded="false" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1xkT2hjZAR53X6PYKAPtoBP5iDjGzZ7pD/view?usp=sharing">
+                            <a class="nav-link" aria-expanded="false" target="_blank" rel="noopener noreferrer"
+                                href="https://drive.google.com/file/d/1xkT2hjZAR53X6PYKAPtoBP5iDjGzZ7pD/view?usp=sharing">
                                 <i class="nav-icon fa fa-list"></i>
                                 <p class="hide-menu">Hướng dẫn sử dụng</p>
-                            </a>  
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -353,16 +354,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="row mb-2">
                         <div class="col-sm-6">
                             <h1 class="m-0 text-dark">Kiểm tra theo từng bài</h1>
-                        </div><!-- /.col -->
+                        </div>
+                        <!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="../home/home.html">Trang chủ</a></li>
                                 <li class="breadcrumb-item active">Kiểm tra theo từng bài</li>
                                 <li class="breadcrumb-item active">Bài 1</li>
                             </ol>
-                        </div><!-- /.col -->
-                    </div><!-- /.row -->
-                </div><!-- /.container-fluid -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
             </div>
             <!-- /.content-header -->
 
@@ -411,87 +416,215 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 <br />
                                                 <br />
                                                 <div class="row">
-                                                    <div id="Container" style="margin: auto;">
+                                                    <div class="col-7">
                                                         <ul id="keyboard">
-                                                            <li class="symbol" id="192"><span class="off">`</span><span
-                                                                    class="on">~</span></li>
-                                                            <li class="symbol" id="1"><span class="off">1</span><span
-                                                                    class="on">!</span></li>
-                                                            <li class="symbol" id="2"><span class="off">2</span><span
-                                                                    class="on">@</span></li>
-                                                            <li class="symbol" id="3"><span class="off">3</span><span
-                                                                    class="on">#</span></li>
-                                                            <li class="symbol" id="4"><span class="off">4</span><span
-                                                                    class="on">$</span></li>
-                                                            <li class="symbol" id="5"><span class="off">5</span><span
-                                                                    class="on">%</span></li>
-                                                            <li class="symbol" id="6"><span class="off">6</span><span
-                                                                    class="on">^</span></li>
-                                                            <li class="symbol" id="7"><span class="off">7</span><span
-                                                                    class="on">&amp;</span></li>
-                                                            <li class="symbol" id="8"><span class="off">8</span><span
-                                                                    class="on">*</span></li>
-                                                            <li class="symbol" id="9"><span class="off">9</span><span
-                                                                    class="on">(</span></li>
-                                                            <li class="symbol" id="0"><span class="off">0</span><span
-                                                                    class="on">)</span></li>
-                                                            <li class="symbol" id="189"><span class="off">-</span><span
-                                                                    class="on">_</span></li>
-                                                            <li class="symbol" id="187"><span class="off">=</span><span
-                                                                    class="on">+</span></li>
-                                                            <li class="delete lastitem" id="delete">Backspace</li>
-                                                            <li class="tab" id="tab">Tab</li>
-                                                            <li class="letter" id="Q">q</li>
-                                                            <li class="letter" id="W">w</li>
-                                                            <li class="letter" id="E">e</li>
-                                                            <li class="letter" id="R">r</li>
-                                                            <li class="letter" id="T">t</li>
-                                                            <li class="letter" id="Y">y</li>
-                                                            <li class="letter" id="U">u</li>
-                                                            <li class="letter" id="I">i</li>
-                                                            <li class="letter" id="O">o</li>
-                                                            <li class="letter" id="P">p</li>
-                                                            <li class="symbol" id="mongoac"><span
-                                                                    class="off">[</span><span class="on">{</span></li>
-                                                            <li class="symbol" id="dongngoac"><span
-                                                                    class="off">]</span><span class="on">}</span></li>
-                                                            <li class="symbol lastitem" id="gachdoc"><span
-                                                                    class="off">\</span><span class="on">|</span></li>
-                                                            <li class="capslock" id="capslock">Caps lock</li>
-                                                            <li class="letter" id="A">a</li>
-                                                            <li class="letter" id="S">s</li>
-                                                            <li class="letter" id="D">d</li>
-                                                            <li class="letter" id="F">f</li>
-                                                            <li class="letter" id="G">g</li>
-                                                            <li class="letter" id="H">h</li>
-                                                            <li class="letter" id="J">j</li>
-                                                            <li class="letter" id="K">k</li>
-                                                            <li class="letter" id="L">l</li>
-                                                            <li class="symbol" id="champhay"><span
-                                                                    class="off">;</span><span class="on">:</span></li>
-                                                            <li class="symbol" id="ngoacdon"><span
-                                                                    class="off">'</span><span class="on">&quot;</span>
+                                                            <li class="symbol" id="`"><span class="off">`</span><span
+                                                                    class="top off">~</span>
                                                             </li>
-                                                            <li class="return lastitem" id="Enter">Enter</li>
-                                                            <li class="left-shift" id="Shift">Shift</li>
-                                                            <li class="letter" id="Z">z</li>
-                                                            <li class="letter" id="X">x</li>
-                                                            <li class="letter" id="C">c</li>
-                                                            <li class="letter" id="V">v</li>
-                                                            <li class="letter" id="B">b</li>
-                                                            <li class="letter" id="N">n</li>
-                                                            <li class="letter" id="M">m</li>
-                                                            <li class="symbol" id="phay"><span class="off">,</span><span
-                                                                    class="on">&lt;</span></li>
-                                                            <li class="symbol" id="cham"><span class="off">.</span><span
-                                                                    class="on">&gt;</span></li>
-                                                            <li class="symbol" id="gachcheo"><span
-                                                                    class="off">/</span><span class="on">?</span></li>
-                                                            <li class="right-shift lastitem" id="Shift">Shift</li>
-                                                            <li class="space lastitem">&nbsp;</li>
+                                                            <li class="symbol" id="1"><span
+                                                                    class="bot off">1</span><span
+                                                                    class="top off">!</span>
+                                                            </li>
+                                                            <li class="symbol" id="2"><span
+                                                                    class="bot off">2</span><span
+                                                                    class="top off">@</span>
+                                                            </li>
+                                                            <li class="symbol" id="3"><span
+                                                                    class="bot off">3</span><span
+                                                                    class="top off">#</span>
+                                                            </li>
+                                                            <li class="symbol" id="4"><span
+                                                                    class="bot off">4</span><span
+                                                                    class="top off">$</span>
+                                                            </li>
+                                                            <li class="symbol" id="5"><span
+                                                                    class="bot off">5</span><span
+                                                                    class="top off">%</span>
+                                                            </li>
+                                                            <li class="symbol" id="6"><span
+                                                                    class="bot off">6</span><span
+                                                                    class="top off">^</span>
+                                                            </li>
+                                                            <li class="symbol" id="7"><span
+                                                                    class="bot off">7</span><span
+                                                                    class="on">&amp;</span></li>
+                                                            <li class="symbol" id="8"><span
+                                                                    class="bot off">8</span><span
+                                                                    class="top off">*</span>
+                                                            </li>
+                                                            <li class="symbol" id="9"><span
+                                                                    class="bot off">9</span><span
+                                                                    class="top off">(</span>
+                                                            </li>
+                                                            <li class="symbol" id="0"><span
+                                                                    class="bot off">0</span><span
+                                                                    class="top off">)</span>
+                                                            </li>
+                                                            <li class="symbol" id="sub"><span
+                                                                    class="bot off">-</span><span
+                                                                    class="top off">_</span>
+                                                            </li>
+                                                            <li class="symbol" id="plus"><span
+                                                                    class="bot off">=</span><span
+                                                                    class="top off">+</span>
+                                                            </li>
+                                                            <li class="delete lastitem" id="delete">delete</li>
+                                                            <li class="tab">tab</li>
+                                                            <li class="letter " id="Q"><span
+                                                                    class="bot off">Q</span><span
+                                                                    class="top off">S</span></li>
+                                                            <li class="letter " id="W"><span
+                                                                    class="bot off">W</span><span
+                                                                    class="top off">K</span></li>
+                                                            <li class="letter " id="E"><span
+                                                                    class="bot off">E</span><span
+                                                                    class="top off">R</span></li>
+                                                            <li class="letter" id="R"><span
+                                                                    class="bot off">R</span><span
+                                                                    class="top off">N</span></li>
+                                                            <li class="letter" id="T"><span
+                                                                    class="bot off">T</span><span
+                                                                    class="top off">H</span></li>
+                                                            <li class="letter" id="Y"><span
+                                                                    class="bot off">Y</span><span
+                                                                    class="top off">Y</span></li>
+                                                            <li class="letter" id="U"><span
+                                                                    class="bot off">U</span><span
+                                                                    class="top off">*</span></li>
+                                                            <li class="letter" id="I"><span
+                                                                    class="bot off">I</span><span
+                                                                    class="top off">W</span></li>
+                                                            <li class="letter" id="O"><span
+                                                                    class="bot off">O</span><span
+                                                                    class="top off">J</span></li>
+                                                            <li class="letter" id="P"><span
+                                                                    class="bot off">P</span><span
+                                                                    class="top off">N</span></li>
+                                                            <li class="symbol" id="["><span
+                                                                    class="bot off">[</span><span
+                                                                    class="top off">T</span></li>
+                                                            <li class="symbol" id="]"><span
+                                                                    class="bot off">]</span><span
+                                                                    class="top off">}</span></li>
+                                                            <li class="symbol lastitem |"><span
+                                                                    class="bot off">\</span><span
+                                                                    class="top off">|</span>
+                                                            </li>
+                                                            <li class="capslock">caps lock</li>
+                                                            <li class="letter" id="A"><span
+                                                                    class="bot off">A</span><span
+                                                                    class="top off">T</span></li>
+                                                            <li class="letter" id="S"><span
+                                                                    class="bot off">S</span><span
+                                                                    class="top off">P</span></li>
+                                                            <li class="letter" id="D"><span
+                                                                    class="bot off">D</span><span
+                                                                    class="top off">D</span></li>
+                                                            <li class="letter" id="F"><span
+                                                                    class="bot off">F</span><span
+                                                                    class="top off">N</span></li>
+                                                            <li class="letter" id="G"><span
+                                                                    class="bot off">G</span><span
+                                                                    class="top off">S</span></li>
+                                                            <li class="letter" id="H"><span
+                                                                    class="bot off">H</span><span
+                                                                    class="top off">H</span></li>
+                                                            <li class="letter" id="J"><span
+                                                                    class="bot off">J</span><span
+                                                                    class="top off">I</span></li>
+                                                            <li class="letter" id="K"><span
+                                                                    class="bot off">K</span><span
+                                                                    class="top off">Y</span></li>
+                                                            <li class="letter" id="L"><span
+                                                                    class="bot off">L</span><span
+                                                                    class="top off J">J</span></li>
+                                                            <li class="symbol" id=";"><span
+                                                                    class="bot off">;</span><span
+                                                                    class="top off">G</span></li>
+                                                            <li class="symbol" id="''"><span
+                                                                    class="bot off">'</span><span
+                                                                    class="top off">K</span></li>
+                                                            <li class="return lastitem">enter</li>
+                                                            <li class="left-shift">shift</li>
+                                                            <li class="letter" id="Z"><span
+                                                                    class="bot off">Z</span><span
+                                                                    class="top off">Z</span></li>
+                                                            <li class="letter" id="X"><span
+                                                                    class="bot off">X</span><span
+                                                                    class="top off">X</span></li>
+                                                            <li class="letter" id="C"><span
+                                                                    class="bot off">C</span><span
+                                                                    class="top off">U</span></li>
+                                                            <li class="letter" id="V"><span
+                                                                    class="bot off">V</span><span
+                                                                    class="top off">O</span></li>
+                                                            <li class="letter" id="B"><span
+                                                                    class="bot off">B</span><span
+                                                                    class="top off">B</span></li>
+                                                            <li class="letter" id="N"><span
+                                                                    class="bot off">N</span><span
+                                                                    class="top off">E</span></li>
+                                                            <li class="letter" id="M"><span
+                                                                    class="bot off">M</span><span
+                                                                    class="top off">A</span></li>
+                                                            <li class="symbol" id="less"><span
+                                                                    class="bot off">,</span><span
+                                                                    class="top off">&lt;</span></li>
+                                                            <li class="symbol" id="more"><span
+                                                                    class="bot off">.</span><span
+                                                                    class="top off">&gt;</span></li>
+                                                            <li class="symbol"><span class="bot off">/</span><span
+                                                                    class="top off">?</span></li>
+                                                            <li class="right-shift lastitem">shift</li>
+                                                            <li class="space lastitem" id="space">&nbsp;</li>
                                                         </ul>
                                                     </div>
+                                                    <div id="secondkeyboard" class="col-5">
+                                                        <ul id="keyboard2">
+                                                            <div class="row">
+                                                                <li id="space-second" class="space lastitem">&nbsp;
+                                                                </li>
+                                                            </div>
+                                                            <div class="row">
+                                                                <li class="letter Q">S</li>
+                                                                <li class="letter W">K</li>
+                                                                <li class="letter E">R</li>
+                                                                <li class="letter R">N</li>
+                                                                <li class="letter T">H</li>
+                                                                <li class="letter U">*</li>
+                                                                <li class="letter I">W</li>
+                                                                <li class="letter O">J</li>
+                                                                <li class="letter P">N</li>
+                                                                <li class="letter [">T</li>
+                                                            </div>
+                                                            <div class="row">
+                                                                <li class="letter A" style="clear: left;">T</li>
+                                                                <li class="letter S">P</li>
+                                                                <li class="letter D">H</li>
+                                                                <li class="letter F">N</li>
+                                                                <li class="letter G">S</li>
+                                                                <li class="letter J">I</li>
+                                                                <li class="letter K">Y</li>
+                                                                <li class="letter K">J</li>
+                                                                <li class="letter :">G</li>
+                                                                <li class="letter ''">K</li>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div style="width: 30%"></div>
+                                                                <li class="letter C">U</li>
+                                                                <li class="letter V">O</li>
+                                                                <li class="letter N">E</li>
+                                                                <li class="letter M">A</li>
+                                                            </div>
+
+                                                        </ul>
+                                                    </div>
+                                                    <!-- End keyboard 2 -->
+
                                                 </div>
+
+                                                <!-- Keyboard 2 -->
+
                                                 <div class="row" style="margin-top: 30px;">
                                                     <div class="col-6">
                                                         <div class="form-group">
@@ -529,7 +662,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- /.col-md-6 -->
             </div>
             <!-- /.row -->
-        </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.container-fluid -->
     </div>
     <!-- /.content -->
     </div>
@@ -543,7 +677,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <p>Được thiết kế độc quyền bởi HCI07 Group</p>
             <p>Phiên bản 20201</p>
         </div>
-      </aside>
+    </aside>
     <!-- /.control-sidebar -->
 
     <!-- Main Footer -->
