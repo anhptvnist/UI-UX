@@ -386,87 +386,101 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             </div>
                                             <div class="row">
                                                 <div class="row" style="margin: auto">
-                                                    <h1>Bài 1 - Đề kiểm tra</h1>
+                                                    <h3>Bài 1 - Đề kiểm tra</h3>
                                                 </div>
                                             </div>
                                             <div class="row" style="font-size: 20px;">Từ cần gõ</div>
                                             <div class="row">
                                                 <div class="row" style="margin: auto">
-                                                    <h1>Đảng</h1>
+                                                    <h4>Đảng</h4>
+                                                    <i id="correct" class="fas fa-check-circle"></i>
+                                                    <i id="incorrect" class="fas fa-times-circle"></i>
                                                 </div>
                                             </div>
                                             <div class="col-sm-12">
-                                                <div class="row" style="margin-top: 20px; background: none;">
-                                                    <div id="input-group" style="width: 80%; margin: auto ">
-                                                        <input type="text" class="form-control" id="inputfield"
-                                                            placeholder="Nhập từ" width="100%"
-                                                            onkeyup="myFunction(event)">
+                                                <div class="row" style="margin-top: 30px;">
+                                                    <div class="col-8">
+                                                        <div class="form-group" style="width: 88%;">
+                                                            <div>
+                                                                Văn bản nhập:
+                                                            </div>
+                                                            <textarea id="text-current" class="form-control area"
+                                                                onkeyup="myFunction(event)" value=""></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <div class="form-group">
+                                                            <div>
+                                                                Ký tự vừa nhập:
+                                                            </div>
+                                                            <textarea id="text-logs"
+                                                                class="form-control area"></textarea>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <br />
-                                                <br />
                                                 <div class="row">
-                                                    <div class="col-7">
+                                                    <div class="col-8">
                                                         <ul id="keyboard">
-                                                            <li class="symbol" id="`"><span class="off">`</span><span
-                                                                    class="top off">~</span>
+                                                            <li class="symbol inactive" id="`"><span
+                                                                    class="off">`</span><span class="top off">~</span>
                                                             </li>
-                                                            <li class="symbol" id="1"><span
+                                                            <li class="symbol addition" id="1"><span
                                                                     class="bot off">1</span><span
                                                                     class="top off">!</span>
                                                             </li>
-                                                            <li class="symbol" id="2"><span
+                                                            <li class="symbol addition" id="2"><span
                                                                     class="bot off">2</span><span
                                                                     class="top off">@</span>
                                                             </li>
-                                                            <li class="symbol" id="3"><span
+                                                            <li class="symbol addition" id="3"><span
                                                                     class="bot off">3</span><span
                                                                     class="top off">#</span>
                                                             </li>
-                                                            <li class="symbol" id="4"><span
+                                                            <li class="symbol addition" id="4"><span
                                                                     class="bot off">4</span><span
                                                                     class="top off">$</span>
                                                             </li>
-                                                            <li class="symbol" id="5"><span
+                                                            <li class="symbol addition" id="5"><span
                                                                     class="bot off">5</span><span
                                                                     class="top off">%</span>
                                                             </li>
-                                                            <li class="symbol" id="6"><span
+                                                            <li class="symbol addition" id="6"><span
                                                                     class="bot off">6</span><span
                                                                     class="top off">^</span>
                                                             </li>
-                                                            <li class="symbol" id="7"><span
+                                                            <li class="symbol addition" id="7"><span
                                                                     class="bot off">7</span><span
                                                                     class="on">&amp;</span></li>
-                                                            <li class="symbol" id="8"><span
+                                                            <li class="symbol addition" id="8"><span
                                                                     class="bot off">8</span><span
                                                                     class="top off">*</span>
                                                             </li>
-                                                            <li class="symbol" id="9"><span
+                                                            <li class="symbol addition" id="9"><span
                                                                     class="bot off">9</span><span
                                                                     class="top off">(</span>
                                                             </li>
-                                                            <li class="symbol" id="0"><span
+                                                            <li class="symbol addition" id="0"><span
                                                                     class="bot off">0</span><span
                                                                     class="top off">)</span>
                                                             </li>
-                                                            <li class="symbol" id="sub"><span
+                                                            <li class="symbol inactive" id="sub"><span
                                                                     class="bot off">-</span><span
                                                                     class="top off">_</span>
                                                             </li>
-                                                            <li class="symbol" id="plus"><span
+                                                            <li class="symbol inactive" id="plus"><span
                                                                     class="bot off">=</span><span
                                                                     class="top off">+</span>
                                                             </li>
-                                                            <li class="delete lastitem" id="delete">delete</li>
-                                                            <li class="tab">tab</li>
-                                                            <li class="letter " id="Q"><span
+                                                            <li class="delete lastitem inactive" id="delete">delete</li>
+                                                            <li class="tab inactive">tab</li>
+                                                            <li class="letter" id="Q"><span
                                                                     class="bot off">Q</span><span
                                                                     class="top off">S</span></li>
-                                                            <li class="letter " id="W"><span
+                                                            <li class="letter" id="W"><span
                                                                     class="bot off">W</span><span
                                                                     class="top off">K</span></li>
-                                                            <li class="letter " id="E"><span
+                                                            <li class="letter" id="E"><span
                                                                     class="bot off">E</span><span
                                                                     class="top off">R</span></li>
                                                             <li class="letter" id="R"><span
@@ -475,7 +489,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             <li class="letter" id="T"><span
                                                                     class="bot off">T</span><span
                                                                     class="top off">H</span></li>
-                                                            <li class="letter" id="Y"><span
+                                                            <li class="letter inactive" id="Y"><span
                                                                     class="bot off">Y</span><span
                                                                     class="top off">Y</span></li>
                                                             <li class="letter" id="U"><span
@@ -493,14 +507,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             <li class="symbol" id="["><span
                                                                     class="bot off">[</span><span
                                                                     class="top off">T</span></li>
-                                                            <li class="symbol" id="]"><span
+                                                            <li class="symbol inactive" id="]"><span
                                                                     class="bot off">]</span><span
                                                                     class="top off">}</span></li>
-                                                            <li class="symbol lastitem |"><span
+                                                            <li class="symbol inactive lastitem |"><span
                                                                     class="bot off">\</span><span
                                                                     class="top off">|</span>
                                                             </li>
-                                                            <li class="capslock">caps lock</li>
+                                                            <li class="capslock inactive">caps lock</li>
                                                             <li class="letter" id="A"><span
                                                                     class="bot off">A</span><span
                                                                     class="top off">T</span></li>
@@ -516,7 +530,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             <li class="letter" id="G"><span
                                                                     class="bot off">G</span><span
                                                                     class="top off">S</span></li>
-                                                            <li class="letter" id="H"><span
+                                                            <li class="letter inactive" id="H"><span
                                                                     class="bot off">H</span><span
                                                                     class="top off">H</span></li>
                                                             <li class="letter" id="J"><span
@@ -534,12 +548,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             <li class="symbol" id="''"><span
                                                                     class="bot off">'</span><span
                                                                     class="top off">K</span></li>
-                                                            <li class="return lastitem">enter</li>
-                                                            <li class="left-shift">shift</li>
-                                                            <li class="letter" id="Z"><span
+                                                            <li class="return inactive lastitem">enter</li>
+                                                            <li class="left-shift addition">shift</li>
+                                                            <li class="letter inactive" id="Z"><span
                                                                     class="bot off">Z</span><span
                                                                     class="top off">Z</span></li>
-                                                            <li class="letter" id="X"><span
+                                                            <li class="letter inactive" id="X"><span
                                                                     class="bot off">X</span><span
                                                                     class="top off">X</span></li>
                                                             <li class="letter" id="C"><span
@@ -548,7 +562,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             <li class="letter" id="V"><span
                                                                     class="bot off">V</span><span
                                                                     class="top off">O</span></li>
-                                                            <li class="letter" id="B"><span
+                                                            <li class="letter inactive" id="B"><span
                                                                     class="bot off">B</span><span
                                                                     class="top off">B</span></li>
                                                             <li class="letter" id="N"><span
@@ -557,19 +571,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             <li class="letter" id="M"><span
                                                                     class="bot off">M</span><span
                                                                     class="top off">A</span></li>
-                                                            <li class="symbol" id="less"><span
+                                                            <li class="symbol inactive" id="less"><span
                                                                     class="bot off">,</span><span
                                                                     class="top off">&lt;</span></li>
-                                                            <li class="symbol" id="more"><span
+                                                            <li class="symbol inactive" id="more"><span
                                                                     class="bot off">.</span><span
                                                                     class="top off">&gt;</span></li>
-                                                            <li class="symbol"><span class="bot off">/</span><span
+                                                            <li class="symbol inactive"><span
+                                                                    class="bot off">/</span><span
                                                                     class="top off">?</span></li>
-                                                            <li class="right-shift lastitem">shift</li>
+                                                            <li class="right-shift addition lastitem">shift</li>
                                                             <li class="space lastitem" id="space">&nbsp;</li>
                                                         </ul>
                                                     </div>
-                                                    <div id="secondkeyboard" class="col-5">
+                                                    <div id="secondkeyboard" class="col-4">
                                                         <ul id="keyboard2">
                                                             <div class="row">
                                                                 <li id="space-second" class="space lastitem">&nbsp;
@@ -595,7 +610,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                 <li class="letter G">S</li>
                                                                 <li class="letter J">I</li>
                                                                 <li class="letter K">Y</li>
-                                                                <li class="letter K">J</li>
+                                                                <li class="letter L">J</li>
                                                                 <li class="letter :">G</li>
                                                                 <li class="letter ''">K</li>
                                                             </div>
@@ -615,26 +630,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                                                 <!-- Keyboard 2 -->
 
-                                                <div class="row" style="margin-top: 30px;">
-                                                    <div class="col-6">
-                                                        <div class="form-group">
-                                                            <div>
-                                                                Văn bản nhập:
-                                                            </div>
-                                                            <textarea class="form-control"
-                                                                onkeyup="myFunction(event)"></textarea>
-                                                        </div>
-                                                    </div>
 
-                                                    <div class="col-6">
-                                                        <div class="form-group">
-                                                            <div>
-                                                                Ký tự vừa nhập:
-                                                            </div>
-                                                            <textarea id="text-logs" class="form-control"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
 
 
