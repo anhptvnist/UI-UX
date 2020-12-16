@@ -185,7 +185,7 @@ function myFunction(event) {
 
 
 var testAmDau = "";
-function checkAmDau(event) {
+function checkAmDau(event, word) {
     console.log("===========", event);
     var code = event.keyCode;
     var id = code;
@@ -272,20 +272,24 @@ function checkAmDau(event) {
         let textLogs = document.getElementById("text-logs");
         textLogs.value += text;
     }
-    test = event.key;
-    console.log(test);
+    testAmDau = event.key;
+    console.log(testAmDau);
     let textCurrent = document.getElementById("text-current");
     let checkIcon = document.getElementById("correct");
     let falseIcon = document.getElementById("incorrect");
-    if (test === "a") {
+    let nextBtn = document.getElementById("next-btn");
+    if (testAmDau === word) {
         checkIcon.style.display = "inline";
         falseIcon.style.display = "none";
-        textCurrent.value = "a";
-        test = "";
+        nextBtn.style.display = "block";
+        text = word;
+        textCurrent.value = text;
+        testAmDau = "";
     }
     else {
         checkIcon.style.display = "none";
-        falseIcon.style.display = "inline"
+        falseIcon.style.display = "inline";
+        nextBtn.style.display = "none";
         textCurrent.value = "";
     }
 
@@ -305,6 +309,5 @@ function checkAmDau(event) {
         button2[button2.length - 1].style.backgroundColor = '';
     }, 500);
     document.getElementById("key_pressed").value += String.fromCharCode(code) + '\n'
-
 
 };

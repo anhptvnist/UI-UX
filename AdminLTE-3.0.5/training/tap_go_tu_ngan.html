@@ -203,13 +203,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </a>
                                 </li>
                                 <li class="nav-item has-treeview">
-                                    <a href="#" class="nav-link active">
+                                    <a href="#" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Tập gõ theo âm tiết</p>
                                     </a>
                                 </li>
                                 <li class="nav-item has-treeview">
-                                    <a href="../training/trainingTu.html" class="nav-link">
+                                    <a href="../training/trainingTu.html" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Tập gõ theo từ</p>
                                     </a>
@@ -346,12 +346,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Học gõ âm đầu</h1>
+                            <h1 class="m-0 text-dark">Tập gõ theo âm tiết</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="../home/home.html">Trang chủ</a></li>
-                                <li class="breadcrumb-item active">Học gõ âm đầu</li>
+                                <li class="breadcrumb-item active">Tập gõ theo âm tiết</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -370,22 +370,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <div class="box">
                                         <div class="box-body">
                                             <div>
-                                                <button type="button" class="btn btn-primary" style="border-color: gray;" id="basic-addon2">
-                                                    <a href="./trainingAmTiet.html" style="color: white;">Trở lại</a>
-                                                </button>
-                                                <button type="button" class="btn btn-success float-right" id="next-btn" style="display: none; border-color: gray;" id="basic-addon2">
-                                                    <a href="./tap_go_am_dau_2.html" style="color: white;">Bài tiếp theo</a>
+                                                <button type="button" class="btn btn-primary"
+                                                    style="border-color: gray;" id="basic-addon2"><a
+                                                        href="./trainingTu.html" style="color: white;">Trở
+                                                        lại</a></button>
+                                                <button type="button" class="btn btn-success float-right" id="next-btn"
+                                                    style="display: none; border-color: gray;" id="basic-addon2">
+                                                    <a href="./tap_go_am_dau_2.html" style="color: white;">Bài tiếp
+                                                        theo</a>
                                                 </button>
                                             </div>
                                             <div class="row">
                                                 <div class="row" style="margin: auto">
-                                                    <h3>Gõ âm đầu đơn</h3>
+                                                    <h3>Bài 2: Gõ từ "Đảng"</h3>
                                                 </div>
                                             </div>
-                                            <div class="row" style="font-size: 20px;">Âm cần gõ</div>
+                                            <div class="row" style="font-size: 20px;">Từ cần gõ</div>
                                             <div class="row">
                                                 <div class="row" style="margin: auto">
-                                                    <h4>T</h4>
+                                                    <h4>Đảng</h4>
                                                     <i id="correct" class="fas fa-check-circle"></i>
                                                     <i id="incorrect" class="fas fa-times-circle"></i>
                                                 </div>
@@ -398,11 +401,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                 Văn bản nhập:
                                                             </div>
                                                             <textarea id="text-current" class="form-control"
-                                                                onkeyup='checkAmDau(event, "a" )' value=""></textarea>
+                                                                onkeyup="myFunction(event)" value=""></textarea>
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-4", style="display: none;">
+                                                    <div class="col-4" , style="display: none;">
                                                         <div class="form-group">
                                                             <div>
                                                                 Ký tự vừa nhập:
@@ -508,12 +511,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                     class="top off">|</span>
                                                             </li>
                                                             <li class="capslock inactive">caps lock</li>
-                                                            <li class="letter" id="A" style="background-color: #FFAEC9;"><span
+                                                            <li class="letter" id="A"
+                                                                style="background-color: #FFAEC9;"><span
                                                                     class="bot off">A</span><span
                                                                     class="top off">T</span></li>
-                                                            <li class="letter" id="S"><span
-                                                                    class="bot off">S</span><span
-                                                                    class="top off">P</span></li>
+                                                            <li class="letter" id="S" style="background-color: yellow;">
+                                                                <span class="bot off">S</span><span
+                                                                    class="top off">P</span>
+                                                            </li>
                                                             <li class="letter" id="D"><span
                                                                     class="bot off">D</span><span
                                                                     class="top off">D</span></li>
@@ -523,7 +528,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             <li class="letter" id="G"><span
                                                                     class="bot off">G</span><span
                                                                     class="top off">S</span></li>
-                                                            <li class="letter inactive" id="H"><span
+                                                            <li class="letter inactive" id="H"
+                                                                style="background-color: #99D9EA;"><span
                                                                     class="bot off">H</span><span
                                                                     class="top off">H</span></li>
                                                             <li class="letter" id="J"><span
@@ -535,7 +541,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             <li class="letter" id="L"><span
                                                                     class="bot off">L</span><span
                                                                     class="top off J">J</span></li>
-                                                            <li class="symbol" id=";"><span
+                                                            <li class="symbol" id=";"
+                                                                style="background-color: #3F48CC;"><span
                                                                     class="bot off">;</span><span
                                                                     class="top off">G</span></li>
                                                             <li class="symbol" id="''"><span
@@ -561,7 +568,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                             <li class="letter" id="N"><span
                                                                     class="bot off">N</span><span
                                                                     class="top off">E</span></li>
-                                                            <li class="letter" id="M"><span
+                                                            <li class="letter" id="M"
+                                                                style="background-color: #7092EA;"><span
                                                                     class="bot off">M</span><span
                                                                     class="top off">A</span></li>
                                                             <li class="symbol inactive" id="less"><span
@@ -596,15 +604,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                 <li class="letter [">T</li>
                                                             </div>
                                                             <div class="row">
-                                                                <li class="letter A" style="clear: left; background-color: #FFAEC9;">T</li>
-                                                                <li class="letter S">P</li>
-                                                                <li class="letter D">H</li>
+                                                                <li class="letter A"
+                                                                    style="clear: left; background-color: #FFAEC9;">T
+                                                                </li>
+                                                                <li class="letter S" style="background-color: yellow;">P
+                                                                </li>
+                                                                <li class="letter D" style="background-color: #EFE480;">
+                                                                    H</li>
                                                                 <li class="letter F">N</li>
                                                                 <li class="letter G">S</li>
                                                                 <li class="letter J">I</li>
                                                                 <li class="letter K">Y</li>
                                                                 <li class="letter L">J</li>
-                                                                <li class="letter :">G</li>
+                                                                <li class="letter :" style="background-color: #3F48CC;">
+                                                                    G</li>
                                                                 <li class="letter ''">K</li>
                                                             </div>
                                                             <div class="row">
@@ -612,7 +625,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                 <li class="letter C">U</li>
                                                                 <li class="letter V">O</li>
                                                                 <li class="letter N">E</li>
-                                                                <li class="letter M">A</li>
+                                                                <li class="letter M" style="background-color: #7092EA;">
+                                                                    A</li>
                                                             </div>
 
                                                         </ul>
