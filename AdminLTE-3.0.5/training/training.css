@@ -98,6 +98,8 @@ Di chuột ra ngoài thì ẩn scroll bar
 
 .needed-type-word {
 	margin-left: 5px;
+	display: inline;
+	font-size: 18px;
 }
 
 .normal-key {
