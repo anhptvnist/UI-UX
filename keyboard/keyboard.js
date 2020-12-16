@@ -53,9 +53,12 @@ $(function () {
         $write.html($write.html() + character);
     });
 });
-
+var test = "";
 function myFunction(event) {
-    var code = event.keyCode
+    console.log("===========", event);
+    // document.getElementsByClassName("area").scrollTop = document.getElementsByClassName("area").scrollHeight;
+    // console.log(document.getElementsByClassName("area"));
+    var code = event.keyCode;
     var id = code;
     if (code >= 48 && code < 59) {
         var id = String(code - 48)
@@ -100,29 +103,79 @@ function myFunction(event) {
         id = "capslock"
     }
     id = String(id)
+    const convertKey = {
+        "81": "S",
+        "87": "K",
+        "69": "R",
+        82: "N",
+        84: "H",
+        85: "*",
+        73: "W",
+        79: "J",
+        80: "N",
+        219: "T",
+        65: "T",
+        83: "P",
+        68: "D",
+        70: "N",
+        71: "S",
+        74: "I",
+        75: "Y",
+        76: "J",
+        186: "G",
+        222: "K",
+        67: "U",
+        86: "O",
+        78: "E",
+        77: "A",
+        number: "#",
+
+    }
+    // Các phím mới nhập
+    if (event.keyCode < 59 && event.keyCode >= 48) {
+        steroCode = "number"
+    }
+    else steroCode = String(event.keyCode);
+    let time = new Date();
+
+    if (convertKey[`${steroCode}`]) {
+        let text = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + "." + time.getMilliseconds() + "    " + convertKey[`${steroCode}`] + "\n";
+        let textLogs = document.getElementById("text-logs");
+        textLogs.value += text;
+    }
+    test += event.key;
+    console.log(test);
+    let textCurrent = document.getElementById("text-current");
+    let checkIcon = document.getElementById("correct");
+    let falseIcon = document.getElementById("incorrect");
+    if (test === "asdf") {
+        checkIcon.style.display = "inline";
+        falseIcon.style.display = "none";
+        textCurrent.value = "Đảng ";
+        test = "";
+
+    }
+    else {
+        checkIcon.style.display = "none";
+        falseIcon.style.display = "inline"
+        textCurrent.value = "";
+    }
+
+
+    // Hết các phím mới nhập
+
     var button = document.getElementById(`${id}`)
     var id2 = "letter" + " " + id;
 
     var button2 = document.getElementsByClassName(id2);
-    console.log("hjelooooo", button);
     button.style.backgroundColor = "red";
     setTimeout(() => {
         button.style.backgroundColor = "";
     }, 500)
-
-    // if (button2.length) {
-    console.log("btn2", button2[button2.length - 1]);
     button2[button2.length - 1].style.backgroundColor = "red";
     setTimeout(() => {
         button2[button2.length - 1].style.backgroundColor = '';
     }, 500);
-    // }
-    // Các phím mới nhập
-    let time = new Date();
-    let text = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + "." + time.getMilliseconds() + "    " + event.key + "\n";
-    let textLogs = document.getElementById("text-logs");
-    textLogs.value += text;
-    // Hết các phím mới nhập
     document.getElementById("key_pressed").value += String.fromCharCode(code) + '\n'
 
 

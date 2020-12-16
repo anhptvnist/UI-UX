@@ -129,7 +129,7 @@
     height: 30px;
     line-height: 30px;
     text-align: center;
-    background: rgb(209, 206, 206);
+    /* background: rgb(0, 0, 0); */
     border: 1px solid #f9f9f9;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -147,6 +147,14 @@
     position: absolute;
     bottom: 5px;
     font-size: small;
+}
+
+.inactive {
+    background: rgb(216, 216, 216) ;
+}
+
+.addition {
+    background: rgb(96, 174, 251)  ;
 }
 
 .capslock,
@@ -233,8 +241,24 @@
 
 .text-area {
     border: 1px solid #111 !important;
-    height: 100px !important;
+    /* height: 300px !important; */
 }
+ .area{
+     height: 200px !important;
+ }
+ #correct{
+     display: none;
+     font-size: 20px;
+     color:green;
+     margin: 6px 0px 0px 10px;
+ }
+ #incorrect{
+     display: none;
+     font-size: 20px;
+     color:red;
+     margin: 6px 0px 0px 10px;
+
+ }
 
 
 /* day la css cho phan thoi gian dem nguoc */
