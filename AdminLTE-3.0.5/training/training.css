@@ -96,3 +96,26 @@ Di chuột ra ngoài thì ẩn scroll bar
     background: #b30000; 
 } */
 
+.needed-type-word {
+	margin-left: 5px;
+}
+
+.normal-key {
+	background-color: white;
+}
+
+#typing-word {
+	color: gold;
+}
+
+.right-word {
+	color: green;
+}
+
+#wrong-word{
+	color:red;
+}
+
+.needed-type-key {
+	background-color: gold;
+}
