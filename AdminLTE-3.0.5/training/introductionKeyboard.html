@@ -1,11 +1,633 @@
 <!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Làm quen với bàn phím</title>
+
+    <link rel="shortcut icon" type="image/png" href="../dist/img/AdminLTELogo.png"/>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="./training.css">
 </head>
-<body>
-    
+
+<body class="hold-transition sidebar-mini">
+    <!-- wrapper -->
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+
+            <!-- SEARCH FORM -->
+            <!-- <form class="form-inline ml-3">
+                <div class="input-group input-group-sm">
+                    <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-navbar" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form> -->
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Messages Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-comments"></i>
+                        <span class="badge badge-danger navbar-badge">3</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <a href="#" class="dropdown-item">
+                            <!-- Message Start -->
+                            <div class="media">
+                                <img src="../dist/img/user1-128x128.jpg" alt="User Avatar"
+                                    class="img-size-50 mr-3 img-circle">
+                                <div class="media-body">
+                                    <h3 class="dropdown-item-title">
+                                        Nguyễn Thế Quang
+                                        <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                                    </h3>
+                                    <p class="text-sm">Vào luyện gõ nào bạn ơi...</p>
+                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 phút trước</p>
+                                </div>
+                            </div>
+                            <!-- Message End -->
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <!-- Message Start -->
+                            <div class="media">
+                                <img src="../dist/img/user8-128x128.jpg" alt="User Avatar"
+                                    class="img-size-50 img-circle mr-3">
+                                <div class="media-body">
+                                    <h3 class="dropdown-item-title">
+                                        Tuấn Anh Phạm
+                                        <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                                    </h3>
+                                    <p class="text-sm">Làm gì mà gõ nhanh lên tay thế Linh</p>
+                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 10 phút trước</p>
+                                </div>
+                            </div>
+                            <!-- Message End -->
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <!-- Message Start -->
+                            <div class="media">
+                                <img src="../dist/img/user3-128x128.jpg" alt="User Avatar"
+                                    class="img-size-50 img-circle mr-3">
+                                <div class="media-body">
+                                    <h3 class="dropdown-item-title">
+                                        Lê An Huy
+                                        <span class="float-right text-sm text-warning"><i
+                                                class="fas fa-star"></i></span>
+                                    </h3>
+                                    <p class="text-sm">Từ này đặt tay thế nào cho tiện nhỉ</p>
+                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 giờ trước</p>
+                                </div>
+                            </div>
+                            <!-- Message End -->
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">Xem tất cả tin nhăn</a>
+                    </div>
+                </li>
+                <!-- Notifications Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-bell"></i>
+                        <span class="badge badge-warning navbar-badge">15</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <span class="dropdown-header">15 Thông báo</span>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-envelope mr-2"></i> 4 Tin nhắn
+                            <span class="float-right text-muted text-sm">3 mins</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-users mr-2"></i> 8 Từ cần học
+                            <span class="float-right text-muted text-sm">12 hours</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-file mr-2"></i> 3 Lời mời thi đấu
+                            <span class="float-right text-muted text-sm">2 days</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">Xem tất cả</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+      <aside class="main-sidebar elevation-4 sidebar-dark-lightblue">
+        <!-- Brand Logo -->
+        <a href="../home/home.html" class="brand-link">
+          <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+               style="opacity: .8">
+          <span class="brand-text font-weight-light">Flash Typing</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+              <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+              <a href="../home/home.html" class="d-block">Nguyễn Quang Linh</a>
+            </div>
+          </div>
+
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+                with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                <a href="../home/home.html" class="nav-link">
+                  <i class="nav-icon fas fa-home"></i>
+                  <p>
+                    Trang chủ
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item has-treeview menu-open">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon far fa-keyboard"></i>
+                    <p>
+                        Tập gõ
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link active">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Làm quen với bàn phím</p>
+                        </a>
+                    </li>
+                    <li class="nav-item has-treeview">
+                        <a href="../training/trainingAmTiet.html" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Tập gõ theo âm tiết</p>
+                        </a>
+                    </li>
+                    <li class="nav-item has-treeview">
+                        <a href="../training/trainingTu.html" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Tập gõ theo từ</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="../training/trainingCau.html" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Tập gõ theo câu</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="../training/trainingDoanVan.html" class="nav-link ">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Tập gõ theo đoạn văn</p>
+                        </a>
+                    </li>
+                </ul>
+
+              </li>
+
+              <li class="nav-item has-treeview ">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-american-sign-language-interpreting"></i>
+                  <p>
+                    Kiểm tra
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item ">
+                    <a href="../test/test.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Kiểm tra nhanh</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../test/listtest.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Kiểm tra theo từng bài</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-treeview ">
+                <a href="#" class="nav-link ">
+                  <i class="nav-icon fas fa-trophy"></i>
+                  <p>
+                    Thi đấu
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item ">
+                    <a href="../competity/LichSuThiDau.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Lịch sử thi đấu</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../competity/LoiMoi.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Lời mời</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="../competity/ThachDau.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Tạo thách đấu</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="../competity/VaoThiDau.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Vào thi đấu</p>
+                    </a>
+                  </li>
+
+                </ul>
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link ">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Thống kê
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item ">
+                    <a href="../statistic/statistic.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Lịch sử tập gõ</p>
+                    </a>
+                  </li>
+                  <li class="nav-item " >
+                    <a href="../statistic/ranking.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Bảng xếp hạng</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a href="../dictionary/dictionary.html" class="nav-link">
+                  <i class="nav-icon fas fa-book"></i>
+                  <p>
+                    Từ điển
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="../documentation/doc.html">
+                    <i class="nav-icon fa fa-list"></i>
+                    <p>Hướng dẫn sử dụng</p>
+                </a>  
+              </li>
+
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-dark">Làm quen với bàn phím</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="../home/home.html">Trang chủ</a></li>
+                                <li class="breadcrumb-item active">Làm quen với bàn phím</li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                                    <!-- <div class="box"> -->
+                                        <!-- <div class="box-body" > -->
+
+
+
+
+                                            <div class="card card-primary card-outline card-outline-tabs">
+                                                <div class="card-header p-0 border-bottom-0">
+                                                  <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                                                    <li class="nav-item">
+                                                      <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-home" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Bàn phím gõ tốc ký</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                      <a class="nav-link" id="custom-tabs-three-profile-tab" data-toggle="pill" href="#custom-tabs-three-profile" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="false">Trật tự của bàn phím tốc ký</a>
+                                                    </li>
+                                                    <!-- <li class="nav-item">
+                                                      <a class="nav-link" id="custom-tabs-three-messages-tab" data-toggle="pill" href="#custom-tabs-three-messages" role="tab" aria-controls="custom-tabs-three-messages" aria-selected="false">Nguyên tắc gõ tốc kí</a>
+                                                    </li> -->
+                                                  </ul>
+                                                </div>
+                                                <div class=" scroll-pane card-body">
+                                                  <div class="tab-content" id="custom-tabs-three-tabContent">
+                                                    <div class="tab-pane fade active show" id="custom-tabs-three-home" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                                                        <div class="img-show">
+                                                            <img src="./img/ban_phim_tocky_tv.png">
+                                                            <p>Hình 1: Bàn phím gõ tốc ký tiếng Việt – sử dụng bàn phím chuyên dụng</p>
+                                                        </div>
+                                                        <p>
+                                                            Bàn phím tốc ký như minh hoạ trong Hình 1 gồm 23 phím. Trong đó, 22 phím dùng để gõ từ và cụm từ, đặc biệt có 2 phím S, 2 phím T, 2 phím H. Ngoài ra, còn có thêm 1 phím phía trên (thanh số) để chuyển đổi chế độ gõ số.
+                                                        </p>
+                                                        <p>
+                                                            Ánh xạ các phím của bàn phím gõ tốc ký lên bàn phím QWERTY thông thường được mô tả trong Hình 2. Trong đó, phím dải số (1234567890) của bàn phím QWERTY tương ứng với thanh số, các phím khác được gán nhãn tương ứng. 
+                                                        </p>
+
+                                                        <div class="img-show">
+                                                            <img src="./img/ban_phim_qwerty.png">
+                                                            <p>Hình 2. Bàn phím gõ tốc ký tiếng Việt – sử dụng bàn phím QWERTY</p>
+                                                        </div>
+
+                                                        <div class="img-show">
+                                                            <img src="./img/dat_ngon_tay.png">
+                                                            <p>Hình 3 mô tả cách đặt ngón tay trên bàn phím tốc ký trong trường hợp gõ từ </p>
+                                                        </div>
+
+                                                        <div class="img-show">
+                                                            <img src="./img/dat_ngon_tay_go_so.png">
+                                                            <p>Hình 4 Mô tả cách đặt ngón tay trên bàn phím tốc ký trong trường hợp gõ số </p>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                    <div class="tab-pane fade" id="custom-tabs-three-profile" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
+
+
+                                                    </div>
+                                                    <!-- <div class="tab-pane fade" id="custom-tabs-three-messages" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
+                                                       Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris. Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum, lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem eu risus tincidunt eleifend ac ornare magna. 
+                                                    </div> -->
+                                                  </div>
+                                                </div>
+                                                <!-- /.card -->
+                                              </div>
+
+
+
+
+
+                                        <!-- </div> -->
+                                        <!-- /.box-body -->
+                                    <!-- </div> -->
+                                    <!-- /.box -->
+                               
+                        </div>
+                        <!-- /.col-md-6 -->
+                    </div>
+                    <!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+            <div class="p-3">
+                <h5>Thông tin</h5>
+                <p>Được thiết kế độc quyền bởi HCI07 Group</p>
+                <p>Phiên bản 20201</p>
+            </div>
+        </aside>
+        <!-- /.control-sidebar -->
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="float-right d-none d-sm-inline">
+                Flash Typing
+            </div>
+            <!-- Default to the left -->
+            <strong>Copyright &copy;<a href="#"> HCI 07</a></strong>
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <div class="modal fade" id="modal-info-v1" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Bộ từ điển v1</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row search-form">
+                        <div class="" style="margin-bottom: 10px;">
+                            <label style="display: inline; margin-right:10px">Âm tiết</label>
+                            <input type="search" class="form-control" placeholder="Nhập âm tiết..."
+                                aria-controls="example1">
+                        </div>
+                    </div>
+                    <div class="row search-form form-group">
+                        <div style="margin-bottom: 10px;">
+                            <label class="form-control-static" style="display: inline; margin-right:20px">Mã gõ</label>
+                            <input type="search" class="form-control" style="margin-left: 0px " placeholder="Nhập mã gõ..."
+                                aria-controls="example1">
+                        </div>
+                        <div>
+                            <div id="example1_filter" class="dataTables_filter">
+                                <label></label>
+                                <a href="#" class="btn btn-success"
+                                    style="margin: 0 10px;"  title="Tìm kiếm">Tìm kiếm</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12" id="table_row">
+                            <table id="example1" class="table table-bordered table-striped dataTable" role="grid"
+                                aria-describedby="example1_info">
+                                <thead>
+                                    <tr role="row">
+                                        <!-- <th class="sorting_asc" tabindex="0"
+                                            aria-controls="example1" rowspan="1" colspan="1"
+                                            aria-sort="ascending"
+                                            aria-label="Rendering engine: activate to sort column descending"
+                                            style="width: 132.4px;">STT</th> -->
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
+                                            colspan="1" aria-label="Browser: activate to sort column ascending"
+                                            style="width: 261.8px;">Âm tiết</th>
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
+                                            colspan="1" aria-label="Platform(s): activate to sort column ascending"
+                                            style="width: 233.8px;">Mã gõ</th>
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
+                                            colspan="1" aria-label="CSS grade: activate to sort column ascending"
+                                            style="width: 213.8px;">Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr role="row" class="odd">
+                                        <td>an</td>
+                                        <td>-AN</td>
+                                        <td>
+                                            <button class="btn btn-warning"
+                                                onclick="clickRemind(false)" title="Xóa khỏi danh sách đang học">
+                                                <i class="fas fa-star"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td>anh</td>
+                                        <td>-AK</td>
+                                        <td>
+                                            <button class="btn btn-outline-warning"
+                                                onclick="clickRemind(true)" title="Lưu vào danh sách đang học">
+                                                <i class="fas fa-star"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td>ang</td>
+                                        <td>-AG</td>
+                                        <td>
+                                            <button class="btn btn-outline-warning"
+                                                onclick="clickRemind(true)" title="Lưu vào danh sách đang học">
+                                                <i class="fas fa-star"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td>am</td>
+                                        <td>-AT</td>
+                                        <td>
+                                            <button class="btn btn-warning"
+                                                onclick="clickRemind(true)" title="Xóa khỏi danh sách đang học">
+                                                <i class="fas fa-star"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td>ai</td>
+                                        <td>-AI</td>
+                                        <td>
+                                            <button class="btn btn-outline-warning"
+                                                onclick="clickRemind(false)" title="Lưu vào danh sách đang học">
+                                                <i class="fas fa-star"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row" id="dataTables_paginate">
+
+                        <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
+                            <ul class="pagination">
+                                <li class="btn btn-default disabled" id="example1_previous">
+                                    <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0"><i
+                                            class="fas fa-angle-double-left"></i></a></li>
+                                <li class="btn btn-default active-btn"><a href="#" aria-controls="example1"
+                                        data-dt-idx="1" tabindex="0">1</a></li>
+                                <li class="btn btn-default "><a href="#" aria-controls="example1" data-dt-idx="2"
+                                        tabindex="0">2</a></li>
+                                <li class="btn btn-default "><a href="#" aria-controls="example1" data-dt-idx="3"
+                                        tabindex="0">3</a></li>
+
+                                <li class="btn btn-default next" id="example1_next"><a href="#" aria-controls="example1"
+                                        data-dt-idx="7" tabindex="0"><i class="fas fa-angle-double-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <!-- justify-content-between <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <!-- REQUIRED SCRIPTS -->
+    <script>
+        const clickDownload = (msg) => {
+            alert(`Đang tải "${msg}" . . . `)
+        }
+        const clickRemind = (remind) => {
+            if(remind) {
+                alert(`Lưu vào danh sách đang học . . . `);
+            } else {
+                alert(`Xóa khỏi danh sách đang học . . . `);
+            }
+
+        }
+    </script>
+
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
 </body>
+
 </html>
