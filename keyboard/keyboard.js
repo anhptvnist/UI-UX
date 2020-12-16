@@ -1,9 +1,9 @@
-$(function() {
+$(function () {
     var $write = $('#write'),
         shift = false,
         capslock = false;
 
-    $('#keyboard li').click(function() {
+    $('#keyboard li').click(function () {
         var $this = $(this),
             character = $this.html(); // If it's a lowercase letter, nothing happens to this variable
 
@@ -101,19 +101,29 @@ function myFunction(event) {
     }
     id = String(id)
     var button = document.getElementById(`${id}`)
-    var id2 = "letter" + " " + id
+    var id2 = "letter" + " " + id;
+
     var button2 = document.getElementsByClassName(id2);
+    console.log("hjelooooo", button);
     button.style.backgroundColor = "red";
     setTimeout(() => {
         button.style.backgroundColor = "";
     }, 500)
-    console.log(code)
+
+    // if (button2.length) {
+    console.log("btn2", button2[button2.length - 1]);
+    button2[button2.length - 1].style.backgroundColor = "red";
+    setTimeout(() => {
+        button2[button2.length - 1].style.backgroundColor = '';
+    }, 500);
+    // }
+    // Các phím mới nhập
+    let time = new Date();
+    let text = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + "." + time.getMilliseconds() + "    " + event.key + "\n";
+    let textLogs = document.getElementById("text-logs");
+    textLogs.value += text;
+    // Hết các phím mới nhập
     document.getElementById("key_pressed").value += String.fromCharCode(code) + '\n'
 
-    if (button2.length) {
-        button2[button2.length - 1].style.backgroundColor = "blue";
-        setTimeout(() => {
-            button2[button2.length - 1].style.backgroundColor = '';
-        }, 500);
-    }
+
 };
