@@ -430,9 +430,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             translation by H. Rackham.
                           </p>
                         </div>
-                        <div class="row" style="margin-top: 30px;">
+                        <div class="row" >
                           <div class="col-sm-12">
-                            <div class="row" style="margin-top: 30px;">
+                            <div class="row" >
                               <div class="col-8">
                                 <div class="form-group" style="width: 88%;">
                                   <div>
@@ -629,7 +629,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- REQUIRED SCRIPTS -->
 <script>
-  var seconds = 120;
+  var seconds = 10;
   function secondPassed() {
     var minutes = Math.round((seconds - 30)/60);
     var remainingSeconds = seconds % 60;
@@ -639,7 +639,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     document.getElementById('countdown').innerHTML = minutes + ":" + remainingSeconds;
     if (seconds == 0) {
       clearInterval(countdownTimer);
-      document.getElementById('countdown').innerHTML = "Buzz Buzz";
+      $('#exampleModal').modal('show');
     } else {
       seconds--;
     }
@@ -654,7 +654,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE App -->
 <script src="../dist/js/adminlte.min.js"></script>
 
-<script type="text/javascript" src="../../keyboard/keyboard.js"></script>
+<script type="text/javascript" src="./keyboard.js"></script>
 </body>
 
 </html>
