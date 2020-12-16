@@ -20,6 +20,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <!-- Custom css -->
+  <link rel="stylesheet" type="text/css" href="../test/test.css" />
+  <link rel="stylesheet" type="text/css" href="../../keyboard/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../keyboard/keyboard2.css" />
 
 </head>
 
@@ -427,23 +430,146 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             translation by H. Rackham.
                           </p>
                         </div>
-                        <div class="row" style="margin-top: 30px;">
-                          <div class="col-6">
-                            <div class="form-group">
-                              <div>
-                                Văn bản nhập:
+                        <div class="row" >
+                          <div class="col-sm-12">
+                            <div class="row" >
+                              <div class="col-8">
+                                <div class="form-group" style="width: 88%;">
+                                  <div>
+                                    Văn bản nhập:
+                                  </div>
+                                  <textarea id="text-current" class="form-control area" onkeyup="myFunction(event)" value=""></textarea>
+                                </div>
                               </div>
-                              <textarea class="form-control"></textarea>
-                            </div>
-                          </div>
 
-                          <div class="col-6">
-                            <div class="form-group">
-                              <div>
-                                Ký tự vừa nhập:
+                              <div class="col-4">
+                                <div class="form-group">
+                                  <div>
+                                    Ký tự vừa nhập:
+                                  </div>
+                                  <textarea id="text-logs" class="form-control area"></textarea>
+                                </div>
                               </div>
-                              <textarea class="form-control"></textarea>
                             </div>
+                            <div class="row">
+                              <div class="col-8">
+                                <ul id="keyboard">
+                                  <li class="symbol inactive" id="`"><span class="off">`</span><span class="top off">~</span>
+                                  </li>
+                                  <li class="symbol addition" id="1"><span class="bot off">1</span><span class="top off">!</span>
+                                  </li>
+                                  <li class="symbol addition" id="2"><span class="bot off">2</span><span class="top off">@</span>
+                                  </li>
+                                  <li class="symbol addition" id="3"><span class="bot off">3</span><span class="top off">#</span>
+                                  </li>
+                                  <li class="symbol addition" id="4"><span class="bot off">4</span><span class="top off">$</span>
+                                  </li>
+                                  <li class="symbol addition" id="5"><span class="bot off">5</span><span class="top off">%</span>
+                                  </li>
+                                  <li class="symbol addition" id="6"><span class="bot off">6</span><span class="top off">^</span>
+                                  </li>
+                                  <li class="symbol addition" id="7"><span class="bot off">7</span><span class="on">&amp;</span></li>
+                                  <li class="symbol addition" id="8"><span class="bot off">8</span><span class="top off">*</span>
+                                  </li>
+                                  <li class="symbol addition" id="9"><span class="bot off">9</span><span class="top off">(</span>
+                                  </li>
+                                  <li class="symbol addition" id="0"><span class="bot off">0</span><span class="top off">)</span>
+                                  </li>
+                                  <li class="symbol inactive" id="sub"><span class="bot off">-</span><span class="top off">_</span>
+                                  </li>
+                                  <li class="symbol inactive" id="plus"><span class="bot off">=</span><span class="top off">+</span>
+                                  </li>
+                                  <li class="delete lastitem inactive" id="delete">delete</li>
+                                  <li class="tab inactive">tab</li>
+                                  <li class="letter" id="Q"><span class="bot off">Q</span><span class="top off">S</span></li>
+                                  <li class="letter" id="W"><span class="bot off">W</span><span class="top off">K</span></li>
+                                  <li class="letter" id="E"><span class="bot off">E</span><span class="top off">R</span></li>
+                                  <li class="letter" id="R"><span class="bot off">R</span><span class="top off">N</span></li>
+                                  <li class="letter" id="T"><span class="bot off">T</span><span class="top off">H</span></li>
+                                  <li class="letter inactive" id="Y"><span class="bot off">Y</span><span class="top off">Y</span></li>
+                                  <li class="letter" id="U"><span class="bot off">U</span><span class="top off">*</span></li>
+                                  <li class="letter" id="I"><span class="bot off">I</span><span class="top off">W</span></li>
+                                  <li class="letter" id="O"><span class="bot off">O</span><span class="top off">J</span></li>
+                                  <li class="letter" id="P"><span class="bot off">P</span><span class="top off">N</span></li>
+                                  <li class="symbol" id="["><span class="bot off">[</span><span class="top off">T</span></li>
+                                  <li class="symbol inactive" id="]"><span class="bot off">]</span><span class="top off">}</span></li>
+                                  <li class="symbol inactive lastitem |"><span class="bot off">\</span><span class="top off">|</span>
+                                  </li>
+                                  <li class="capslock inactive">caps lock</li>
+                                  <li class="letter" id="A"><span class="bot off">A</span><span class="top off">T</span></li>
+                                  <li class="letter" id="S"><span class="bot off">S</span><span class="top off">P</span></li>
+                                  <li class="letter" id="D"><span class="bot off">D</span><span class="top off">D</span></li>
+                                  <li class="letter" id="F"><span class="bot off">F</span><span class="top off">N</span></li>
+                                  <li class="letter" id="G"><span class="bot off">G</span><span class="top off">S</span></li>
+                                  <li class="letter inactive" id="H"><span class="bot off">H</span><span class="top off">H</span></li>
+                                  <li class="letter" id="J"><span class="bot off">J</span><span class="top off">I</span></li>
+                                  <li class="letter" id="K"><span class="bot off">K</span><span class="top off">Y</span></li>
+                                  <li class="letter" id="L"><span class="bot off">L</span><span class="top off J">J</span></li>
+                                  <li class="symbol" id=";"><span class="bot off">;</span><span class="top off">G</span></li>
+                                  <li class="symbol" id="''"><span class="bot off">'</span><span class="top off">K</span></li>
+                                  <li class="return inactive lastitem">enter</li>
+                                  <li class="left-shift addition">shift</li>
+                                  <li class="letter inactive" id="Z"><span class="bot off">Z</span><span class="top off">Z</span></li>
+                                  <li class="letter inactive" id="X"><span class="bot off">X</span><span class="top off">X</span></li>
+                                  <li class="letter" id="C"><span class="bot off">C</span><span class="top off">U</span></li>
+                                  <li class="letter" id="V"><span class="bot off">V</span><span class="top off">O</span></li>
+                                  <li class="letter inactive" id="B"><span class="bot off">B</span><span class="top off">B</span></li>
+                                  <li class="letter" id="N"><span class="bot off">N</span><span class="top off">E</span></li>
+                                  <li class="letter" id="M"><span class="bot off">M</span><span class="top off">A</span></li>
+                                  <li class="symbol inactive" id="less"><span class="bot off">,</span><span class="top off">&lt;</span></li>
+                                  <li class="symbol inactive" id="more"><span class="bot off">.</span><span class="top off">&gt;</span></li>
+                                  <li class="symbol inactive"><span class="bot off">/</span><span class="top off">?</span></li>
+                                  <li class="right-shift addition lastitem">shift</li>
+                                  <li class="space lastitem" id="space">&nbsp;</li>
+                                </ul>
+                              </div>
+                              <div id="secondkeyboard" class="col-4">
+                                <ul id="keyboard2">
+                                  <div class="row">
+                                    <li id="space-second" class="space lastitem">&nbsp;
+                                    </li>
+                                  </div>
+                                  <div class="row">
+                                    <li class="letter Q">S</li>
+                                    <li class="letter W">K</li>
+                                    <li class="letter E">R</li>
+                                    <li class="letter R">N</li>
+                                    <li class="letter T">H</li>
+                                    <li class="letter U">*</li>
+                                    <li class="letter I">W</li>
+                                    <li class="letter O">J</li>
+                                    <li class="letter P">N</li>
+                                    <li class="letter [">T</li>
+                                  </div>
+                                  <div class="row">
+                                    <li class="letter A" style="clear: left;">T</li>
+                                    <li class="letter S">P</li>
+                                    <li class="letter D">H</li>
+                                    <li class="letter F">N</li>
+                                    <li class="letter G">S</li>
+                                    <li class="letter J">I</li>
+                                    <li class="letter K">Y</li>
+                                    <li class="letter L">J</li>
+                                    <li class="letter :">G</li>
+                                    <li class="letter ''">K</li>
+                                  </div>
+                                  <div class="row">
+                                    <div style="width: 30%"></div>
+                                    <li class="letter C">U</li>
+                                    <li class="letter V">O</li>
+                                    <li class="letter N">E</li>
+                                    <li class="letter M">A</li>
+                                  </div>
+
+                                </ul>
+                              </div>
+                              <!-- End keyboard 2 -->
+
+                            </div>
+
+                            <!-- Keyboard 2 -->
+
+
                           </div>
                         </div>
                       </div>
@@ -503,7 +629,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- REQUIRED SCRIPTS -->
 <script>
-  var seconds = 120;
+  var seconds = 10;
   function secondPassed() {
     var minutes = Math.round((seconds - 30)/60);
     var remainingSeconds = seconds % 60;
@@ -513,7 +639,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     document.getElementById('countdown').innerHTML = minutes + ":" + remainingSeconds;
     if (seconds == 0) {
       clearInterval(countdownTimer);
-      document.getElementById('countdown').innerHTML = "Buzz Buzz";
+      $('#exampleModal').modal('show');
     } else {
       seconds--;
     }
@@ -527,6 +653,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../dist/js/adminlte.min.js"></script>
+
+<script type="text/javascript" src="./keyboard.js"></script>
 </body>
 
 </html>

@@ -54,6 +54,7 @@ $(function () {
     });
 });
 var test = "";
+var text = "";
 function myFunction(event) {
     console.log("===========", event);
     // document.getElementsByClassName("area").scrollTop = document.getElementsByClassName("area").scrollHeight;
@@ -144,21 +145,22 @@ function myFunction(event) {
         textLogs.value += text;
     }
     test += event.key;
-    console.log(test);
     let textCurrent = document.getElementById("text-current");
     let checkIcon = document.getElementById("correct");
     let falseIcon = document.getElementById("incorrect");
     if (test === "asdf") {
         checkIcon.style.display = "inline";
         falseIcon.style.display = "none";
-        textCurrent.value = "Đảng ";
+        text += "Đảng ";
+        textCurrent.value = text;
         test = "";
-
     }
     else {
         checkIcon.style.display = "none";
         falseIcon.style.display = "inline"
-        textCurrent.value = "";
+        text += "";
+        textCurrent.value = text;
+
     }
 
 
