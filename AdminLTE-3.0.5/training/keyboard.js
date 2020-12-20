@@ -146,8 +146,8 @@ function myFunction(event) {
   // }
   test += event.key;
   let textCurrent = document.getElementById("text-current");
-
-  if (test === "astgnm") {
+  if(event.keyCode==32){
+  if (test=="astgnm ") {
 
     text += "Đảng ";
     textCurrent.value = text;
@@ -167,11 +167,38 @@ function myFunction(event) {
     document.getElementsByClassName("V")[0].setAttribute("class","needed-type-key")
     document.getElementsByClassName("I")[0].setAttribute("class","needed-type-key")
     document.getElementsByClassName(":")[0].setAttribute("class","needed-type-key")
+
+    test = ""
+    test += event.key;
+    if(test="wfvi;"){
+      typedword = document.getElementById("typing-word")
+    typedword.setAttribute("class", "right-word")
+    document.getElementById("typing-word").removeAttribute("id")
+    document.getElementsByClassName("right-word")[0].nextElementSibling.setAttribute("id", "typing-word")
+    }
   }
-  else {
+  else 
+  {  
+    test=""  
+     document.getElementById("A").setAttribute("class","needed-type-key")
+      document.getElementById("S").setAttribute("class","needed-type-key")
+      document.getElementById("T").setAttribute("class","needed-type-key")
+      document.getElementById("G").setAttribute("class","needed-type-key")
+      document.getElementById("N").setAttribute("class","needed-type-key")
+      document.getElementById("M").setAttribute("class","needed-type-key")
+  
+        document.getElementsByClassName("A")[0].setAttribute("class","needed-type-key")
+        document.getElementsByClassName("S")[0].setAttribute("class","needed-type-key")
+    document.getElementsByClassName("T")[0].setAttribute("class","needed-type-key")
+    document.getElementsByClassName("G")[0].setAttribute("class","needed-type-key")
+    document.getElementsByClassName("N")[0].setAttribute("class","needed-type-key")
+    document.getElementsByClassName("M")[0].setAttribute("class","needed-type-key")
     text += "";
     textCurrent.value = text;
 
+  }}
+  else{
+    textCurrent.value = text;
   }
 
 
